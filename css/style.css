@@ -1,0 +1,735 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Roboto:wght@300&display=swap');
+/*
+1ero etiqueta
+2do class (.)
+3ero id (#) = el mas importante
+
+/* para resetear los valores por diferencia entre navegadores */
+
+/* poner margenes en % y no en px */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url("../images/backg5.webp");
+    /*width: fit-content;
+    margin-left: auto;
+    margin-right: auto;*/
+}
+
+/* Secciones comunes */
+
+header{
+    grid-area: encabezado;
+    /*position: relative;*/
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    /*flex-wrap: nowrap;*/
+    background-color: rgb(73, 92, 131);
+}
+
+.header_img{
+    width: 300px;
+    /*display: inline-block;
+    padding: 5px 5px 5px 5px;*/
+}
+
+.header_ul{
+    /*display: inline-block;
+    position: absolute;
+    bottom: 2%;
+    right: 1%;*/
+    white-space: nowrap;
+}
+
+.header_li{
+    display: inline-block;
+    list-style:none;
+    margin: 5px 5px 0px 5px;
+}
+
+.header_a{
+    /*color: white;*/
+    text-decoration: none;
+}
+
+.titulos{
+    grid-area: titulos;
+    color: #1b2e2e;
+    text-align: center;
+    line-height: 125%;
+    /*padding-top: 5px;
+    padding-bottom: 5px;*/
+}
+
+.mainLatI{
+    grid-area: mainLatI;
+    /*display: inline-block;*/
+    display: flex;     
+    flex-direction: column;
+    gap: 10px;
+    padding-right: 1%;
+    padding-left: 1%;
+}
+
+.asideLatD{
+    grid-area: asideLatD;
+    display: inline-block; 
+    /* position: absolute;
+    padding-right: 1%;
+    padding-left: auto;*/
+    padding: 5px 0 5px 0;
+    margin-right: 1%;
+    border-radius: 10px;
+    background: rgba(88, 88, 88, 0.2);
+    text-align: center;
+}
+
+.section1{
+    padding: 5px 5px 0px 5px;
+    border-radius: 10px;
+    background: rgba(88, 88, 88, 0.2);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.flex_start{
+    display: flex;
+    justify-content: flex-start; 
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    align-items: flex-end;
+}
+
+footer{
+    grid-area: pie;
+    text-align: center;
+    background-color: rgb(73, 92, 131);
+    color: white;
+    position: relative;
+    bottom: 0;
+    padding-top: 0.5%;
+}
+
+.section_div_img{
+    text-align: center;
+    display: inline-block;
+    margin: 4px;
+    /*padding: 5px 5px 5px 5px;*/
+}
+
+.img_opac:hover {
+	opacity: .8;
+}
+
+.img_sombra{
+    box-shadow: 0 13px 27px -5px rgba(0, 0, 0, 0.25), 0 8px 16px -8px hsl(0deg 0% 0% / 30%), 0 -6px 16px -6px rgba(0, 0, 0, 0.03);
+}
+
+/* Fin secciones comunes */
+
+/* Fuentes */
+
+.popp_20{
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    color: #1b2e2e;
+}
+
+.popp_17{
+    font-family: 'Poppins', sans-serif;
+    font-size: 17px;
+    color: #1b2e2e;
+}
+
+.popp_15{
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    color: #1b2e2e;
+    font-weight: 800;
+}
+
+.popp_13{
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    color: #1b2e2e;
+    font-weight: 800;
+}
+
+.popp_12{
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    color: #1b2e2e;
+    font-weight: 800;
+}
+
+.font_ital{
+    font-style:italic;
+}
+
+.font_precio{
+    color:rgb(53, 70, 105);
+}
+
+.font_promo{
+    color:red;
+}
+
+.font_white{
+    color:white;
+}
+
+.font_espac1{
+    line-height: 120%;
+}
+
+.font_espac1{
+    line-height: 150%;
+}
+
+.font_weight{
+    font-weight: 550;
+}
+
+/* Fin fuentes */
+
+/* Index */
+
+.gridIndex {
+    display: grid;
+    grid-template-columns: 75% 25%; 
+    grid-template-rows: repeat(5, auto); 
+    grid-template-areas:
+        "encabezado encabezado"
+        "titulos titulos"
+        "mainLatI asideLatD"
+        "mainLatI ."
+        "pie pie";
+    grid-row-gap: 5px;
+}
+
+.flex_center{
+    display: flex;
+    justify-content:center; 
+    flex-wrap: wrap;
+    /*overflow-x: auto;*/
+}
+
+.flex_col{
+   display: flex;     
+   flex-direction: column; 
+   justify-content: center;
+   align-items: center; 
+}
+
+/* Productos */
+
+.gridProds {
+    display: grid;
+    grid-template-columns: 75% 25%; 
+    grid-template-rows: repeat(5, auto); 
+    grid-template-areas:
+        "encabezado encabezado"
+        "titulos titulos"
+        "mainLatI asideLatD"
+        "mainLatI ."
+        "pie pie";
+    grid-row-gap: 5px;
+}
+
+.categorias{
+    display: grid;
+    grid-template-columns: 35px auto; 
+    grid-template-rows: repeat(4, auto); 
+    grid-template-areas:
+        "cat_titulo cat_titulo"
+        "masVIco masV"
+        "libIco libros"
+        "jueIco juegos";
+    align-items: center;
+}
+
+.cat_titulo{
+    grid-area: cat_titulo;
+    justify-content: center;
+}
+
+.masVIco{
+    grid-area: masVIco;
+}
+
+.masV{
+    grid-area: masV;
+    text-align: start;
+    justify-items: center;
+}
+
+.libIco{
+    grid-area: libIco;
+    align-self: start;
+}
+
+.libros{
+    grid-area: libros;
+    display: inline;
+    text-align: left;
+    padding-top: 8px;
+}
+
+.jueIco{
+    grid-area: jueIco;
+}
+
+.juegos{
+    grid-area: juegos;
+    text-align: start;
+    justify-items: center;
+}
+
+.aside_subli{
+    list-style:none;
+    text-align: left;
+}
+
+.aside_a{
+    color: #1b2e2e;
+    text-decoration: none;
+}
+
+/* Novedades*/
+
+.gridNovs {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 100%; 
+    grid-template-rows: repeat(4, auto);
+    grid-template-rows: 1fr 1fr 100fr 1fr;
+    grid-template-areas:
+        "encabezado"
+        "titulos"
+        "contenido"
+        "pie";
+    grid-row-gap: 5px;
+}
+
+.contenido{
+    grid-area: contenido;
+}
+
+.fila{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; 
+    grid-column-gap: 1%;
+    row-gap: 5px;
+    flex-wrap: wrap;
+    padding-bottom: 5px;
+    /*align-items: flex-end;*/
+}
+
+.novedades1, .novedades2{   
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(2, auto); 
+    grid-template-areas:
+        "nov1_tit nov1_tit"
+        "nov1_1 nov1_2";
+    /*align-items: flex-start;*/
+    grid-column-gap: 1%;
+    padding: 0.5%;
+}
+
+.novedades2 {
+    grid-template-areas:
+        "nov2_tit nov2_tit"
+        "nov2_1 nov2_2";
+}
+
+.nov1_tit{
+    grid-area: nov1_tit;
+}
+
+.nov1_1{
+    grid-area: nov1_1;
+    white-space: nowrap;
+    /*align-content:flex-start;*/
+}
+
+.nov1_2{
+    grid-area: nov1_2;
+    white-space: nowrap;
+    margin-right: 5px;
+    /*align-content:flex-start;*/
+}
+
+.nov2_tit{
+    grid-area: nov2_tit;
+}
+
+.nov2_1{
+    grid-area: nov2_1;
+    /*white-space: nowrap;
+    align-content:flex-start;*/
+}
+
+.nov2_2{
+    grid-area: nov2_2;
+    /*white-space: nowrap;*/
+    justify-self: center;
+    padding-right: 5px;
+    /*align-content:flex-start;*/
+}
+
+.novs_iframe{
+    width: 615px;
+    height: 345px;
+    margin-top: 1%;
+}
+
+/* Contacto */
+
+.gridCont {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: auto auto; 
+    /*grid-template-rows: repeat(4, auto);*/
+    grid-template-rows: 1fr 1fr 100fr 1fr;
+    grid-template-areas:
+        "encabezado encabezado"
+        "titulos titulos"
+        "formu mapa"
+        "pie pie";
+    grid-column-gap: 3%;
+    grid-row-gap: 5px;
+    /*justify-items: space-around;*/
+}
+
+.formu{
+    grid-area: formu;
+    margin-left: 6%;
+    /*justify-self: center;*/
+}
+
+.mapa{
+    grid-area: mapa;
+    margin-right: 6%;
+    /*justify-self: stretch;*/
+}
+
+.formulario{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center; 
+}
+
+.cont_iframe{
+    width: 98%;
+    height: 442px;
+    border: 0;
+    margin: 1% 1% 0% 1%;
+}
+
+.cont_p{
+    padding: 0.1rem 0.3rem;
+}
+
+.cont_input{
+    display: block;
+    padding: 0.1rem 0.6rem;
+    margin-left: 0.5rem;
+    margin-bottom: 0.5rem;
+    width: 100%;
+    max-width: 400px;
+}
+
+.p_check{
+    display: inline-block;
+    /*padding: 0.1rem 0.6rem;*/
+}
+
+.cont_button{
+    padding: 0.1rem 0.6rem;
+    margin: 0.5rem 0 0.5rem 0.5rem;
+}
+
+/* Promociones */
+
+.img_club{
+    /*border-radius: 10px;*/
+    display: block;
+    margin: 0.5rem auto 0.5rem auto;
+}
+
+/*.section_div_adic2{
+    overflow-x: auto;
+    white-space: nowrap;
+}*/
+
+.promo_adic1{
+    display: inline-block;
+    padding: 0.1rem 0.6rem;
+}
+
+.promo_adic2{
+    display: block;
+    padding: 0.1rem 0.6rem;
+}
+
+/* Tamaño tablet */
+@media (max-width:1024px){
+    .header_li{
+        display: block;
+        margin: 0px 1px 1px 0px;
+        /*background-color: aqua;*/
+    }
+
+    .header_img{
+        align-self: center;
+    }
+
+    h1,h2{
+        display: inline-block;
+    }
+
+    /* Index */
+    .gridIndex {
+        grid-template-columns: 100%; 
+        grid-template-rows: repeat(5, auto); 
+        grid-template-areas:
+            "encabezado"
+            "titulos"
+            "mainLatI"
+            "asideLatD"
+            "pie";
+    }
+
+    .asideLatD{
+        margin-left: 1%;
+        /*margin-top: 5px;*/
+    }
+
+    .flex_col{
+        flex-direction: row;
+    }
+
+    /* Productos */
+    .gridProds {
+        grid-template-columns: 100%; 
+        grid-template-rows: repeat(5, auto); 
+        grid-template-areas:
+            "encabezado"
+            "titulos"
+            "asideLatD"
+            "mainLatI"
+            "pie";
+    }
+
+    .categorias{
+        display: grid;
+        grid-template-columns: 35px auto;
+        grid-template-rows: repeat(4, auto); 
+        grid-template-areas:
+        "cat_titulo cat_titulo "
+        "masVIco masV"
+        "libIco libros "
+        "jueIco juegos";
+        align-items: center;
+    }
+
+    .libros{
+        padding-top: 0;
+        display: inline-block;
+    }
+
+    .cat_titulo{
+        display: none;
+    }
+
+    .ul_cats {
+        /*display: none;*/
+        display: inline-block;
+        padding-left: 10%;
+        position: relative;
+        /*grid-area: ul_cats;*/
+    }
+
+    .ul_cats li {
+        display: inline-block;
+        /*grid-area: ul_cats;*/
+    }
+     
+    li:hover .ul_cats {
+        display: inline-block;
+        /*grid-area: ul_cats;*/
+    }
+
+    /* Novedades */
+    .novedades2 {   
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: repeat(3, auto); 
+        grid-template-areas:
+            "nov2_tit"
+            "nov2_1"
+            "nov2_2";
+        /*align-items: flex-start;*/
+        grid-column-gap: 1%;
+        padding: 0.5%;
+    }
+
+    /* Contacto */
+    .gridCont {
+        grid-template-columns: auto; 
+        grid-template-rows: repeat(5, auto); 
+        grid-template-areas:
+            "encabezado"
+            "titulos"
+            "formu"
+            "mapa"
+            "pie";
+        /*grid-column-gap: 1%;
+        grid-row-gap: 5px;
+        justify-items: space-around;*/
+    }
+
+    .formu{
+        margin-left: 5%;
+        margin-right: 5%;
+        /*justify-self: center;*/
+    }
+    
+    .mapa{
+        margin-left: 5%;
+        margin-right: 5%;
+        /*justify-self: stretch;*/
+    }
+}
+
+/* Tamaño celular */
+@media (max-width:768px){
+    /*.header_li{
+        background-color: rgb(255, 0, 221);
+    }*/
+
+    /* Productos */
+
+    .categorias{
+        display: grid;
+        grid-template-columns: 35px auto 35px auto 35px auto;
+        grid-template-rows: repeat(2, auto);
+        grid-template-areas:
+            "cat_titulo cat_titulo cat_titulo cat_titulo cat_titulo cat_titulo"
+            "masVIco masV libIco libros jueIco juegos";
+        align-items: center;
+    }
+
+    .ul_cats {
+        display: none;
+        position: absolute;
+        /*grid-area: ul_cats;*/
+        background: #ACB7A4;
+        padding-left: 0;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        width: fit-content;
+     }
+    /*.ul_cats li {
+        display: inline-block;
+        /*grid-area: ul_cats;
+     }*/
+
+    li:hover .ul_cats {
+        display: block;
+        /*grid-area: ul_cats;*/
+     }
+}
+
+/* Sin usar previos a Grid */
+
+/*.main100{
+    width: 100%;
+    display: inline-block;
+    padding-right: 1%;
+    padding-left: 1%;
+}*/
+
+/*.section_div98{
+    
+    /*display: flex;
+    justify-content: center;*/
+   /* display: inline-block;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 98%;
+}*/
+
+/*.section_div100{
+    display: inline-block;
+    position: relative;
+    width: 100%;*/
+    /*text-align: center;
+    overflow-x: auto;
+    white-space: nowrap;*/
+    /*display: flex;
+    justify-content: center;*//*
+}*/
+
+/*.section_div100_cont{
+    display: inline-block;
+    position: relative;
+    margin-bottom: 1%;
+    white-space:initial;
+    text-align: left;
+}*/
+
+/*.section_div100_cont{
+    display: inline-block;
+}*/
+
+/*.section_div_adic{ /*en novedades */
+  /*  text-align: center;
+    overflow-x: auto;
+    white-space: nowrap;
+}*/
+
+/*.section3{
+    display: inline-block;
+    width: 49%;
+    padding-left: 1%;
+    padding-right: 1%;
+    margin-left: 0.75%;
+    margin-bottom: 10px;
+    background: rgba(88, 88, 88, 0.2);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}*/
+
+/*.section4{
+    margin: auto;
+    width: fit-content;
+    background: rgba(88, 88, 88, 0.2);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}*/
+
+/*.section5{
+    /*position: sticky;
+    top:80px;*//*
+    display: inline-block; 
+    position:absolute;
+    width: 48%;
+    padding-left: 1%;
+    padding-right: 1%;
+    margin-left: 1.5%;
+    background: rgba(88, 88, 88, 0.2);
+}*/

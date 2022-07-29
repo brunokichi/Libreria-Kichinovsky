@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/style.css">
+        <link rel="shortcut icon" href="../images/icono.png">
+        <title>The Online Bookstore</title>
+    </head>
+<body>
+    <div class="gridCont">
+        <header>
+            <!-- Logo -->
+            <img src="../images/logo.png" alt="Imagen Logo" class="header_img">
+            <!-- Menú de navegación -->
+            <nav>
+                <ul class="header_ul popp_15">
+                    <li class="header_li">
+                        <a href="../index.html" class="header_a font_white">Inicio</a>
+                    </li>
+                    <li class="header_li">
+                        <a href="prods.html" class="header_a font_white">Productos</a>
+                    </li>
+                    <li class="header_li">
+                        <a href="novedades.html" class="header_a font_white">Novedades</a>
+                    </li>
+                    <li class="header_li">
+                        <a href="promociones.html" class="header_a font_white" >Promociones</a>
+                    </li>
+                    <li class="header_li">
+                        <a href="#" class="header_a font_white">Contacto</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <div class="titulos">
+            <h1 class="popp_20">The Online Bookstore</h1>
+            <h2 class="popp_17">Contacto</h2>
+        </div>
+        <main class="formu">
+            <!-- Formulario de contacto -->
+            <section class="section1 formulario">
+                <form action="#">
+                    <!-- Recuadro para datos personales -->
+                    <p class="popp_17">Datos personales</p>
+                    <input type="text" class="cont_input popp_13 font_ital" name="nombre_ape" placeholder="Escriba su nombre y apellido" required >
+                    <input type="text" class="cont_input popp_13 font_ital" name="telefono" placeholder="Escriba su número de télefono" required>
+                    <input type="email" class="cont_input popp_13 font_ital" name="email" placeholder="Ingrese su casilla de email" required>
+                    <!-- Recuadro para especificar motivo -->
+                    <p class="popp_17">Motivo de contacto</p>
+                    <select name="motivo" class="cont_input popp_13 font_ital">
+                        <option value="Compra">Club The Online Bookstore</option>
+                        <option value="Compra">Compra</option>
+                        <option value="Consulta">Consulta</option>
+                        <option value="Reclamo">Reclamo</option>
+                        <option value="Sugerencia">Sugerencias</option>
+                        <option value="Otros">Otros</option>
+                    </select>
+                    <p class="popp_17">Escribanos un comentario</p>
+                    <textarea name="comentario" id="comentario" class="cont_input popp_13 font_ital" cols="35" rows="10" placeholder="Describanos el motivo de su contacto"></textarea>
+                    <!-- Recuadro para encuesta -->
+                    <p class="popp_17 p_check">Nos recomendaria?</p>
+                    <label for="recom_si" class="popp_13 cont_p">Si
+                        <input id="recom_si" name="recomend" type="radio" value="si" checked required>
+                    </label>
+                    <label for="recom_no" class="popp_13 cont_p">No
+                        <input id="recom_no" name="recomend" type="radio" value="no"  required>
+                    </label>
+                    <!-- Recuadro para control del formulario -->
+                    <div>
+                        <input class="popp_13 cont_button" type="reset" value="Limpiar formulario">
+                        <input class="popp_13 cont_button" type="submit" value="Enviar formulario">
+                    </div>
+                </form>
+                <img src="../images/cont.png" alt="Imagen contacto">
+            </section>
+        </main>
+        <section class="mapa">
+            <div class="section1">
+                <p class="popp_17 ">Av. Corrientes 890, Capital Federal (CP 1043)</p>
+                <p class="popp_17 ">consultas@theonlinebookstore.com</p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.0128659566203!2d-58.380791433661386!3d-34.603836168036786!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccacef16e071d%3A0x30c92693d8e6cbf!2sAv.%20Corrientes%20890%2C%20C1043%20CABA!5e0!3m2!1ses-419!2sar!4v1658144042161!5m2!1ses-419!2sar" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="cont_iframe"></iframe>
+            </div>
+        </section>
+        <!-- Pie de pagina con acceso a distintas redes -->
+        <footer>
+            <div>
+                <img src="../images/whts.png" alt="Escribinos por Whatsapp">
+                <img src="../images/instag.png" alt="Seguinos en Instagram">
+                <img src="../images/faceb.png" alt="Seguinos en Facebook">
+            </div>
+            <p class="popp_13 font_white">®2022 - Todos los derechos reservados</p>
+        </footer>
+    </div>
+</body>
+</html>
