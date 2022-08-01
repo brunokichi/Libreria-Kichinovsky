@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Roboto:wght@300&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css');
 /*
 1ero etiqueta
 2do class (.)
@@ -29,13 +30,20 @@ header{
     justify-content: space-between;
     align-items: flex-end;
     /*flex-wrap: nowrap;*/
-    background-color: rgb(73, 92, 131);
+    background-color: rgb(65, 95, 156);
+    /*background-image: url("../images/backg6.png");*/
 }
 
 .header_img{
     width: 300px;
+    margin-left: 10px;
     /*display: inline-block;
     padding: 5px 5px 5px 5px;*/
+}
+
+.header_img:hover{
+    animation: pulse;
+    animation-duration: 1s;
 }
 
 .header_ul{
@@ -44,6 +52,7 @@ header{
     bottom: 2%;
     right: 1%;*/
     white-space: nowrap;
+    margin-right: 5px;
 }
 
 .header_li{
@@ -66,18 +75,24 @@ header{
     padding-bottom: 5px;*/
 }
 
-.mainLatI{
-    grid-area: mainLatI;
+.mainLatI_Index, .mainLatI_Prod{
+    grid-area: mainLatI_Index;
     /*display: inline-block;*/
     display: flex;     
     flex-direction: column;
     gap: 10px;
     padding-right: 1%;
     padding-left: 1%;
+    animation: fadeInLeft;
+    animation-duration: 1s;
 }
 
-.asideLatD{
-    grid-area: asideLatD;
+.mainLatI_Prod{
+    grid-area: mainLatI_Prod;
+}
+
+.asideLatD_Index, .asideLatD_Prod{
+    grid-area: asideLatD_Index;
     display: inline-block; 
     /* position: absolute;
     padding-right: 1%;
@@ -87,6 +102,12 @@ header{
     border-radius: 10px;
     background: rgba(88, 88, 88, 0.2);
     text-align: center;
+    animation: fadeInDown;
+    animation-duration: 1s;
+}
+
+.asideLatD_Prod{
+    grid-area: asideLatD_Prod;
 }
 
 .section1{
@@ -109,7 +130,7 @@ header{
 footer{
     grid-area: pie;
     text-align: center;
-    background-color: rgb(73, 92, 131);
+    background-color: rgb(65, 95, 156);
     color: white;
     position: relative;
     bottom: 0;
@@ -125,10 +146,16 @@ footer{
 
 .img_opac:hover {
 	opacity: .8;
+    /*zoom: 101%;*/
 }
 
 .img_sombra{
     box-shadow: 0 13px 27px -5px rgba(0, 0, 0, 0.25), 0 8px 16px -8px hsl(0deg 0% 0% / 30%), 0 -6px 16px -6px rgba(0, 0, 0, 0.03);
+}
+
+.footer_img:hover{
+        animation: heartBeat; /* referring directly to the animation's @keyframe declaration */
+        animation-duration: 2s; /* don't forget to set a duration! */ 
 }
 
 /* Fin secciones comunes */
@@ -196,6 +223,22 @@ footer{
     font-weight: 550;
 }
 
+.promo{
+    animation-duration: 2s;
+    animation-name: cambiocolor;
+    animation-iteration-count: infinite;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+@keyframes cambiocolor {
+    0% { color: #1b2e2e;}
+    25% { color: darkred;}
+    /*50% { color: crimson;font-size: 16px;}*/
+    50% { color: crimson;transform: scale(1.2,1);}
+    75% { color: darkred;}
+ }
+
 /* Fin fuentes */
 
 /* Index */
@@ -207,8 +250,8 @@ footer{
     grid-template-areas:
         "encabezado encabezado"
         "titulos titulos"
-        "mainLatI asideLatD"
-        "mainLatI ."
+        "mainLatI_Index asideLatD_Index"
+        "mainLatI_Index ."
         "pie pie";
     grid-row-gap: 5px;
 }
@@ -236,8 +279,8 @@ footer{
     grid-template-areas:
         "encabezado encabezado"
         "titulos titulos"
-        "mainLatI asideLatD"
-        "mainLatI ."
+        "mainLatI_Prod asideLatD_Prod"
+        "mainLatI_Prod ."
         "pie pie";
     grid-row-gap: 5px;
 }
@@ -342,6 +385,8 @@ footer{
     /*align-items: flex-start;*/
     grid-column-gap: 1%;
     padding: 0.5%;
+    animation: fadeIn;
+    animation-duration: 1s;
 }
 
 .novedades2 {
@@ -415,16 +460,20 @@ footer{
     /*justify-self: center;*/
 }
 
-.mapa{
-    grid-area: mapa;
-    margin-right: 6%;
-    /*justify-self: stretch;*/
-}
-
 .formulario{
     display: flex;
     justify-content: space-evenly;
     align-items: center; 
+    animation: fadeInLeft;
+    animation-duration: 1s;
+}
+
+.mapa{
+    grid-area: mapa;
+    margin-right: 6%;
+    animation: fadeInDown;
+    animation-duration: 1s;
+    /*justify-self: stretch;*/
 }
 
 .cont_iframe{
@@ -457,7 +506,7 @@ footer{
     margin: 0.5rem 0 0.5rem 0.5rem;
 }
 
-/* Promociones */
+/* Beneficios */
 
 .img_club{
     /*border-radius: 10px;*/
@@ -490,10 +539,16 @@ footer{
 
     .header_img{
         align-self: center;
+        animation-duration: 0s;
     }
 
     h1,h2{
         display: inline-block;
+    }
+
+    .asideLatD_Index, .asideLatD_Prod{
+        margin-left: 1%;
+        /*margin-top: 5px;*/
     }
 
     /* Index */
@@ -503,14 +558,19 @@ footer{
         grid-template-areas:
             "encabezado"
             "titulos"
-            "mainLatI"
-            "asideLatD"
+            "mainLatI_Index"
+            "asideLatD_Index"
             "pie";
     }
 
-    .asideLatD{
-        margin-left: 1%;
-        /*margin-top: 5px;*/
+    .mainLatI_Index{
+        animation: fadeInLeft;
+        animation-duration: 1s;
+    }
+
+    .asideLatD_Index{
+        animation: fadeInRight;
+        animation-duration: 1s;
     }
 
     .flex_col{
@@ -524,9 +584,19 @@ footer{
         grid-template-areas:
             "encabezado"
             "titulos"
-            "asideLatD"
-            "mainLatI"
+            "asideLatD_Prod"
+            "mainLatI_Prod"
             "pie";
+    }
+
+    .asideLatD_Prod{
+        animation: fadeInLeft;
+        animation-duration: 1s;
+    }
+
+    .mainLatI_Prod{
+        animation: fadeInRight;
+        animation-duration: 1s;
     }
 
     .categorias{
@@ -602,12 +672,21 @@ footer{
         margin-right: 5%;
         /*justify-self: center;*/
     }
+
+    .formulario{
+        animation: fadeInLeft;
+        animation-duration: 1s;
+    }
     
     .mapa{
         margin-left: 5%;
         margin-right: 5%;
+        animation: fadeInRight;
+        animation-duration: 1s;
         /*justify-self: stretch;*/
     }
+    
+
 }
 
 /* Tamaño celular */
