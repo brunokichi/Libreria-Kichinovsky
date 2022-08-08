@@ -5,56 +5,187 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="../css/style.css">
+        <!-- <link href="./css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
         <link rel="shortcut icon" href="../images/icono.png">
         <title>The Online Bookstore</title>
     </head>
 <body>
     <div class="gridNovs">
         <header>
-            <!-- Logo -->
-            <img src="../images/logo.png" alt="Imagen Logo" class="header_img">
-            <!-- Menú de navegación -->
-            <nav>
-                <ul class="header_ul popp_15">
-                    <li class="header_li">
-                        <a href="../index.html" class="header_a font_white">Inicio</a>
-                    </li>
-                    <li class="header_li">
-                        <a href="prods.html" class="header_a font_white">Productos</a>
-                    </li>
-                    <li class="header_li">
-                        <a href="novedades.html" class="header_a font_white">Novedades</a>
-                    </li>
-                    <li class="header_li">
-                        <a href="#" class="header_a font_white" >Beneficios</a>
-                    </li>
-                    <li class="header_li">
-                        <a href="contacto.html" class="header_a font_white">Contacto</a>
-                    </li>
-                </ul>
-            </nav>
+            <div class="container-fluid p-0">
+                <nav class="navbar navbar-expand-lg navbar-dark bkg_transp align-items-end p-0">
+                    <!-- Logo -->
+                    <a class="navbar-brand" href="../index.html"><img src="../images/logo.png" alt="Imagen Logo" class="header_img"></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <!-- Menú de navegación -->
+                    <div class="collapse navbar-collapse justify-content-end" id="navbarToggler">
+                        <ul class="navbar-nav popp_15">
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="../index.html">Inicio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="prods.html">Productos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="novedades.html">Novedades</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active transp" href="#">Beneficios</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contacto.html">Contacto</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
         </header>
         <div class="titulos">
-            <h1 class="popp_20">The Online Bookstore</h1>
-            <h2 class="popp_17">Promociones vigentes</h2>
+            <h1 class="popp_20 mb-0 lh-1">The Online Bookstore</h1>
+            <h2 class="popp_17 mb-1">Promociones vigentes</h2>
         </div>
-        <main  class="contenido">
-            <section class="fila">
+        <main  class="contenido container">
+            <section class="row justify-content-center">
                 <!-- Lista de medios de pago -->
-                <div class="section1">
-                    <p class="popp_15">Club The Online Bookstore</p>
-                    <p class="popp_15 font_espac2">Adhiriendote al club obtenes un 10% de descuento en nuestros productos</p>
-                    <p class="popp_13">La mejor selección de libros, todos los meses en la puerta de tu casa.</p>
-                    <p class="popp_13">Lorem ipsum dolor sit amet consectetur<br>
-                        adipisicing elit. Similique beatae eos omnis vel adipisci<br>
-                        explicabo laborum sint illo consequatur fugit! A ullam sit<br>
-                        iure quia ducimus natus, dicta suscipit dolor!</p> 
-                    
-                    <p class="popp_13">Consultas? Escribinos a club@theonlinebookstore.com.ar o<br>
-                        completá el formulario <a href="contacto.html" class="header_a">aqui</a></p>
-                    <img class="img_club img_sombra"  src="../images/club.jpeg" alt="Imagen club">
+                <div id="carouselExampleCaptions" class="col-10 carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active card mb-3">
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                    <img src="../images/med_pago.jpg" class="img-fluid rounded" alt="Medios de pago">
+                                </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title popp_17">Medios de pago</h5>
+                                    <p class="card-text popp_15">
+                                        Efectivo (Sólo en local) - 10% de descuento<br>
+                                        Tarjeta de credito - Compras mayores a $4.000 3 cuotas sin interes <br>
+                                        Mercado Pago - Consultar promos vigentes<br>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+                    <div class="carousel-item card mb-3">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src="../images/med_envio.jpg" class="img-fluid rounded" alt="Medios de envio">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body popp_17">
+                                    <h5 class="card-title">Medios de envio</h5>
+                                    <p class="card-text popp_15">
+                                        CABA - A domicilio sin cargo compras mayores a $6.000<br>
+                                        GBA - A domicilio sin cargo compras mayores a $8.000<br>
+                                        Interior del país - Consultar<br>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
                 </div>
-                <div class="section1">
+                <div class="section1 bkg_transp col-12">
+                    <p class="popp_15">Club The Online Bookstore</p>
+                    <div class="row g-0">
+                        <div class="col-12">
+                            <p class="popp_15 font_espac2">Adhiriendote al club obtenes un 10% de descuento en nuestros productos</p>
+                            <p class="popp_13">
+                                <img class="mx-auto mb-1 shadow-lg rounded img-fluid float-end"  src="../images/club.jpeg" alt="Imagen club">
+                                La mejor selección de libros, todos los meses en la puerta de tu casa.<br>
+                                Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Similique beatae eos omnis vel adipisci
+                                explicabo laborum sint illo consequatur fugit! A ullam sit
+                                iure quia ducimus natus, dicta suscipit dolor!<br>
+                                Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Similique beatae eos omnis vel adipisci
+                                explicabo laborum sint illo consequatur fugit! A ullam sit
+                                iure quia ducimus natus, dicta suscipit dolor!
+                                Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Similique beatae eos omnis vel adipisci
+                                explicabo laborum sint illo consequatur fugit! A ullam sit
+                                iure quia ducimus natus, dicta suscipit dolor!<br>
+                                Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Similique beatae eos omnis vel adipisci
+                                explicabo laborum sint illo consequatur fugit! A ullam sit
+                                iure quia ducimus natus, dicta suscipit dolor!
+                                Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Similique beatae eos omnis vel adipisci
+                                explicabo laborum sint illo consequatur fugit! A ullam sit
+                                iure quia ducimus natus, dicta suscipit dolor!<br>
+                                Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Similique beatae eos omnis vel adipisci
+                                explicabo laborum sint illo consequatur fugit! A ullam sit
+                                iure quia ducimus natus, dicta suscipit dolor!
+                                Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Similique beatae eos omnis vel adipisci
+                                explicabo laborum sint illo consequatur fugit! A ullam sit
+                                iure quia ducimus natus, dicta suscipit dolor!<br>
+                                Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Similique beatae eos omnis vel adipisci
+                                explicabo laborum sint illo consequatur fugit! A ullam sit
+                                iure quia ducimus natus, dicta suscipit dolor!
+                            </p> 
+                        </div>
+                        <div class="col-10 mx-auto mt-3 mb-3">
+                            <div class="row row-cols-1 row-cols-md-3 g-2">
+                                <div class="col">
+                                    <div class="card h-100">
+                                        <img src="../images/oro.png" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title popp_17">Suscripción Oro</h5>
+                                            <p class="card-text popp_15">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus ratione minima nemo accusamus excepturi corporis ullam consectetur atque blanditiis illo voluptatibus iusto quae saepe tenetur, exercitationem iure ut perferendis fuga?</p>
+                                        </div>
+                                        <div class="card-footer text-center">
+                                            <small class="font_precio">$3.000 por mes</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card h-100">
+                                        <img src="../images/plata.png" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title popp_17">Suscripción Plata</h5>
+                                            <p class="card-text popp_15">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus ratione minima nemo accusamus excepturi corporis ullam consectetur atque blanditiis illo voluptatibus iusto quae saepe tenetur, exercitationem iure ut perferendis fuga?</p>
+                                        </div>
+                                        <div class="card-footer text-center">
+                                            <small class="font_precio">$2.100 por mes</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card h-100">
+                                        <img src="../images/bronce.png" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title popp_17">Suscripción Bronce</h5>
+                                            <p class="card-text popp_15">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus ratione minima nemo accusamus excepturi corporis ullam consectetur atque blanditiis illo voluptatibus iusto quae saepe tenetur, exercitationem iure ut perferendis fuga?</p>
+                                        </div>
+                                        <div class="card-footer text-center">
+                                            <small class="font_precio">$1.400 por mes</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-10">
+                            <p class="popp_13">
+                                Consultas? Escribinos a club@theonlinebookstore.com.ar o completá el formulario <a href="contacto.html" class="header_a">aqui</a>
+                            </p>
+                        </div>
+                </div>
+                
+                <!--<div class="section1">
                     <p class="popp_15">Formas de pago</p>
                     <ul>
                         <li class="popp_13 promo_adic1">Efectivo</li>
@@ -75,9 +206,9 @@
                         <li class="popp_13 promo_adic2">Consultar promos vigentes</li>
                         <img class="promo_adic2" src="../images/mercpago.jpg" alt="Mercado Pago">
                     </ul>
-                </div>
+                </div> -->
                 <!-- Lista de formas de envio -->
-                <div class="section1">
+                <!--<div class="section1">
                     <p class="popp_15">Envios</p>
                     <ul>
                         <li class="popp_13 promo_adic1">CABA</li>
@@ -99,18 +230,19 @@
                             <li class="popp_13  font_promo promo_adic1">Sin cargo compras mayores a $6.000</li>
                         </div>
                     </ul>
-                </div>
+                </div> -->
             </section>
         </main>
         <!-- Pie de pagina con acceso a distintas redes -->
-        <footer>
+        <footer class="bkg_transp">
             <div>
                 <img src="../images/whts.png" alt="Escribinos por Whatsapp" class="footer_img">
                 <img src="../images/instag.png" alt="Seguinos en Instagram" class="footer_img">
                 <img src="../images/faceb.png" alt="Seguinos en Facebook" class="footer_img">
             </div>
-            <p class="popp_13 font_white">®2022 - Todos los derechos reservados</p>
+            <p class="popp_13">®2022 - Todos los derechos reservados</p>
         </footer>
     </div>
+    <script src="../js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
