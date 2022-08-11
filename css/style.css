@@ -96,7 +96,7 @@ header{
 }
 
 .bkg_transp{
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.7);
 }
 
 .mainLatI_Index, .mainLatI_Prod{
@@ -125,7 +125,7 @@ header{
     margin-right: 1%;
     border-radius: 10px;
     /*background: rgba(88, 88, 88, 0.2);
-    background: rgba(0, 0, 0, 0.4);*/
+    background: rgba(0, 0, 0, 0.7);*/
     text-align: center;
     animation: fadeInDown;
     animation-duration: 1s;
@@ -139,7 +139,7 @@ header{
     padding: 5px 5px 0px 5px;
     border-radius: 10px;
     /*background: rgba(88, 88, 88, 0.2);
-    background: rgba(0, 0, 0, 0.4);*/
+    background: rgba(0, 0, 0, 0.7);*/
     /*background-size: cover;
     background-position: center;
     background-repeat: no-repeat;*/
@@ -816,7 +816,8 @@ footer{
         display: none;
         position: absolute;
         /*grid-area: ul_cats;*/
-        background: #ACB7A4;
+        /*background: #ACB7A4;*/
+        background: rgba(0, 0, 0, 0.7);
         padding-left: 0;
         margin-left: auto;
         margin-right: auto;
@@ -846,6 +847,10 @@ footer{
     .card-group {
         display: flex;
         flex-flow: row wrap;
+    }
+
+    .text_al{
+        text-align: center;
     }
 }
 
