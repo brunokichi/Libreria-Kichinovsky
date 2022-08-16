@@ -1,0 +1,36 @@
+.popp_xl{
+    font-family: $fuente_familia;
+    font-size: 20px;
+    color: $fuente_color;
+}
+.popp_l{
+    font-family: $fuente_familia;
+    font-size: 17px;
+    color: $fuente_color;
+}
+.popp_m{
+    font-family: $fuente_familia;
+    font-size: 15px;
+    color: $fuente_color;
+}
+.popp_s{
+    font-family: $fuente_familia;
+    font-size: 13px;
+    color: $fuente_color;
+    font-weight: 500;
+}
+.font_ital{
+    font-style:italic;
+    color: rgb(190, 190, 190);
+}
+.font_precio{
+    color:rgb(249, 121, 121);
+    font-weight: 600;
+}
+.font_espac1{
+    line-height: 120%;
+    margin-bottom: 0;
+}
+.font_espac2{
+    line-height: 150%;
+}

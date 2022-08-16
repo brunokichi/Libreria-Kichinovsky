@@ -1,0 +1,26 @@
+#MultiC .carousel-inner .carousel-item.active,
+#MultiC .carousel-inner .carousel-item-next,
+#MultiC .carousel-inner .carousel-item-prev {
+    display: flex;
+}
+#MultiC .carousel-inner .carousel-item-end.active{
+    transform: unset;
+}
+#MultiC .carousel-inner .carousel-item-next {
+    transform: unset;
+}
+#MultiC .carousel-inner .carousel-item-start.active{
+    opacity: .1;
+} 
+#MultiC .carousel-inner .carousel-item-prev {
+    transform: unset;
+}
+#MultiC .carousel-inner .carousel-item-end{
+    transform: unset;
+}
+#MultiC .carousel-inner .carousel-item-start { 
+    transform: unset;
+}
+#MultiC .carousel-item{
+    justify-content: space-between;
+}

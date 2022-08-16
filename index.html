@@ -13,16 +13,15 @@
     <div class="gridIndex">
         <header>
             <div class="container-fluid p-0">
-                <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-primary align-items-end p-0"> -->
                 <nav class="navbar navbar-expand-lg bkg_transp navbar-dark align-items-end p-0">
                     <!-- Logo -->
                     <a class="navbar-brand" href="#"><img src="./images/logo.png" alt="Imagen Logo" class="header_img"></a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+                    <button class="navbar-toggler mb-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <!-- Menú de navegación -->
                     <div class="collapse navbar-collapse justify-content-end" id="navbarToggler">
-                        <ul class="navbar-nav popp_15">
+                        <ul class="navbar-nav popp_m">
                             <li class="nav-item">
                                 <a class="nav-link active transp" aria-current="page" href="#">Inicio</a>
                             </li>
@@ -44,169 +43,218 @@
             </div>
         </header>
         <div class="titulos">
-            <h1 class="popp_20 mb-1 lh-1">The Online Bookstore</h1>
+            <h1 class="popp_xl mb-1 lh-1">The Online Bookstore</h1>
         </div>
         <main class="mainLatI_Index">
             <!-- Secciónes para destacar productos -->
             <section class="section1 bkg_transp">
-                <p class="popp_15 mb-1">Recomendados</p>
-                <div class="flex_start">
-                    <figure class="figure me-3">
-                        <img src="https://picsum.photos/150/200?random=1" class="figure-img rounded img_opac mb-0 img_sombra" alt="Recomendados 1">
-                        <figcaption class="popp_13 text-center">Titulo 1</figcaption>
-                    </figure>
-                    <figure class="figure me-3">
-                        <img src="https://picsum.photos/150/200?random=2" class="figure-img rounded img_opac mb-0 img_sombra" alt="Recomendados 2">
-                        <figcaption class="popp_13 text-center">Titulo 2</figcaption>
-                    </figure>
-                    <figure class="figure me-3">
-                        <img src="https://picsum.photos/150/200?random=1" class="figure-img rounded img_opac mb-0 img_sombra" alt="Recomendados 3">
-                        <figcaption class="popp_13 text-center">Titulo 3</figcaption>
-                    </figure>
-                    <figure class="figure me-3">
-                        <img src="https://picsum.photos/150/200?random=2" class="figure-img rounded img_opac mb-0 img_sombra" alt="Recomendados 4">
-                        <figcaption class="popp_13 text-center">Titulo 4</figcaption>
-                    </figure>
-                    <figure class="figure me-3">
-                        <img src="https://picsum.photos/150/200?random=1" class="figure-img rounded img_opac mb-0 img_sombra" alt="Recomendados 5">
-                        <figcaption class="popp_13 text-center">Titulo 5</figcaption>
-                    </figure>
-                    <figure class="figure me-3">
-                        <img src="https://picsum.photos/150/200?random=2" class="figure-img rounded img_opac mb-0 img_sombra" alt="Recomendados 6">
-                        <figcaption class="popp_13 text-center">Titulo 6</figcaption>
-                    </figure>
-                    <figure class="figure me-3">
-                        <img src="https://picsum.photos/150/200?random=1" class="figure-img rounded img_opac mb-0 img_sombra" alt="Recomendados 7">
-                        <figcaption class="popp_13 text-center">Titulo 7</figcaption>
-                    </figure>
-                    <figure class="figure me-3">
-                        <img src="https://picsum.photos/150/200?random=2" class="figure-img rounded img_opac mb-0 img_sombra" alt="Recomendados 8">
-                        <figcaption class="popp_13 text-center">Titulo 8</figcaption>
-                    </figure>
+                <p class="popp_m mb-1">Recomendados</p>
+                <div id="MultiC">
+                    <div class="row mx-auto my-auto justify-content-center">
+                        <div id="multicarous" class="carousel slide" data-bs-ride="carousel">
+                            <button class="carousel-control-prev" type="button" data-bs-target="#multicarous" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#multicarous" data-bs-slide="next">
+                                <span class="carousel-control-next-icon " aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                            <div class="carousel-inner" role="listbox">
+                                <div class="carousel-item active">
+                                    <!--<div class="col-6 col-md-3 col-xl-2">-->
+                                        <figure class="figure me-3">
+                                            <img src="./images/prod_el_italiano.png" class="figure-img rounded img_opac mb-1 img_sombra" alt="Recomendados 1">
+                                            <figcaption class="popp_s text-center">Titulo 1</figcaption>
+                                        </figure>
+                                    <!--</div>-->
+                                </div>
+                                <div class="carousel-item">
+                                    <!--<div class="col-6 col-md-3 col-xl-2">-->
+                                        <figure class="figure me-3">
+                                            <img src="./images/prod_estrellas.png" class="figure-img rounded img_opac mb-1 img_sombra" alt="Recomendados 2">
+                                            <figcaption class="popp_s text-center">Titulo 2</figcaption>
+                                        </figure>
+                                    <!--</div>-->
+                                </div>
+                                <div class="carousel-item">
+                                    <!--<div class="col-6 col-md-3 col-xl-2">-->
+                                        <figure class="figure me-3">
+                                            <img src="./images/prod_el_italiano.png" class="figure-img rounded img_opac mb-1 img_sombra" alt="Recomendados 3">
+                                            <figcaption class="popp_s text-center">Titulo 3</figcaption>
+                                        </figure>
+                                    <!--</div>-->
+                                </div>
+                                <div class="carousel-item">
+                                    <!--<div class="col-6 col-md-3 col-xl-2">-->
+                                        <figure class="figure me-3">
+                                            <img src="./images/prod_estrellas.png" class="figure-img rounded img_opac mb-1 img_sombra" alt="Recomendados 4">
+                                            <figcaption class="popp_s text-center">Titulo 4</figcaption>
+                                        </figure>
+                                    <!--</div>-->
+                                </div>
+                                <div class="carousel-item">
+                                    <!--<div class="col-6 col-md-3 col-xl-2">-->
+                                        <figure class="figure me-3">
+                                            <img src="./images/prod_el_italiano.png" class="figure-img rounded img_opac mb-1 img_sombra" alt="Recomendados 5">
+                                            <figcaption class="popp_s text-center">Titulo 5</figcaption>
+                                        </figure>
+                                    <!--</div>-->
+                                </div>
+                                <div class="carousel-item">
+                                    <!--<div class="col-6 col-md-3 col-xl-2">-->
+                                        <figure class="figure me-3">
+                                            <img src="./images/prod_estrellas.png" class="figure-img rounded img_opac mb-1 img_sombra" alt="Recomendados 6">
+                                            <figcaption class="popp_s text-center">Titulo 6</figcaption>
+                                        </figure>
+                                    <!--</div>-->
+                                </div>
+                                <div class="carousel-item">
+                                    <!--<div class="col-6 col-md-3 col-xl-2">-->
+                                        <figure class="figure me-3">
+                                            <img src="./images/prod_el_italiano.png" class="figure-img rounded img_opac mb-1 img_sombra" alt="Recomendados 7">
+                                            <figcaption class="popp_s text-center">Titulo 7</figcaption>
+                                        </figure>
+                                    <!--</div>-->
+                                </div>
+                                <div class="carousel-item">
+                                    <!--<div class="col-6 col-md-3 col-xl-2">-->
+                                        <figure class="figure me-3">
+                                            <img src="./images/prod_estrellas.png" class="figure-img rounded img_opac mb-1 img_sombra" alt="Recomendados 8">
+                                            <figcaption class="popp_s text-center">Titulo 8</figcaption>
+                                        </figure>
+                                    <!--</div>-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+                <!--<div class="flex_start">
+                    <figure class="figure me-3">
+                        <img src="https://picsum.photos/150/200?random=1" class="figure-img rounded img_opac mb-1 img_sombra" alt="Recomendados 1">
+                        <figcaption class="popp_s text-center">Titulo 1</figcaption>
+                    </figure>
+                    <figure class="figure me-3">
+                        <img src="https://picsum.photos/150/200?random=2" class="figure-img rounded img_opac mb-1 img_sombra" alt="Recomendados 2">
+                        <figcaption class="popp_s text-center">Titulo 2</figcaption>
+                    </figure>
+                    <figure class="figure me-3">
+                        <img src="https://picsum.photos/150/200?random=1" class="figure-img rounded img_opac mb-1 img_sombra" alt="Recomendados 3">
+                        <figcaption class="popp_s text-center">Titulo 3</figcaption>
+                    </figure>
+                    <figure class="figure me-3">
+                        <img src="https://picsum.photos/150/200?random=2" class="figure-img rounded img_opac mb-1 img_sombra" alt="Recomendados 4">
+                        <figcaption class="popp_s text-center">Titulo 4</figcaption>
+                    </figure>
+                    <figure class="figure me-3">
+                        <img src="https://picsum.photos/150/200?random=1" class="figure-img rounded img_opac mb-1 img_sombra" alt="Recomendados 5">
+                        <figcaption class="popp_s text-center">Titulo 5</figcaption>
+                    </figure>
+                    <figure class="figure me-3">
+                        <img src="https://picsum.photos/150/200?random=2" class="figure-img rounded img_opac mb-1 img_sombra" alt="Recomendados 6">
+                        <figcaption class="popp_s text-center">Titulo 6</figcaption>
+                    </figure>
+                    <figure class="figure me-3">
+                        <img src="https://picsum.photos/150/200?random=1" class="figure-img rounded img_opac mb-1 img_sombra" alt="Recomendados 7">
+                        <figcaption class="popp_s text-center">Titulo 7</figcaption>
+                    </figure>
+                    <figure class="figure me-3">
+                        <img src="https://picsum.photos/150/200?random=2" class="figure-img rounded img_opac mb-1 img_sombra" alt="Recomendados 8">
+                        <figcaption class="popp_s text-center">Titulo 8</figcaption>
+                    </figure>
+                </div>-->
             </section>
             <section class="section1 bkg_transp">
-                <p class="popp_15 mb-1"><a href="pages/prods.html#mas_vend" class="aside_a">Más vendidos</a></p>
+                <p class="mb-1"><a href="pages/prods.html#mas_vend" class="text-decoration-none popp_m">Más vendidos</a></p>
                 <div class="flex_start">
                     <figure class="figure me-3">
-                        <img src="https://picsum.photos/150/200?random=11" class="figure-img rounded img_opac mb-0 img_sombra" alt="Mas vendidos 1">
-                        <figcaption class="popp_13 text-center">Titulo 1</figcaption>
+                        <img src="https://picsum.photos/150/200?random=11" class="figure-img rounded img_opac mb-1 img_sombra" alt="Mas vendidos 1">
+                        <figcaption class="popp_s text-center">Titulo 1</figcaption>
                     </figure>
                     <figure class="figure me-3">
-                        <img src="https://picsum.photos/150/200?random=12" class="figure-img rounded img_opac mb-0 img_sombra" alt="Mas vendidos 2">
-                        <figcaption class="popp_13 text-center">Titulo 2</figcaption>
+                        <img src="https://picsum.photos/150/200?random=12" class="figure-img rounded img_opac mb-1 img_sombra" alt="Mas vendidos 2">
+                        <figcaption class="popp_s text-center">Titulo 2</figcaption>
                     </figure>
                     <figure class="figure me-3">
-                        <img src="https://picsum.photos/150/200?random=11" class="figure-img rounded img_opac mb-0 img_sombra" alt="Mas vendidos 3">
-                        <figcaption class="popp_13 text-center">Titulo 3</figcaption>
+                        <img src="https://picsum.photos/150/200?random=11" class="figure-img rounded img_opac mb-1 img_sombra" alt="Mas vendidos 3">
+                        <figcaption class="popp_s text-center">Titulo 3</figcaption>
                     </figure>
                     <figure class="figure me-3">
-                        <img src="https://picsum.photos/150/200?random=12" class="figure-img rounded img_opac mb-0 img_sombra" alt="Mas vendidos 4">
-                        <figcaption class="popp_13 text-center">Titulo 4</figcaption>
+                        <img src="https://picsum.photos/150/200?random=12" class="figure-img rounded img_opac mb-1 img_sombra" alt="Mas vendidos 4">
+                        <figcaption class="popp_s text-center">Titulo 4</figcaption>
                     </figure>
                     <figure class="figure me-3">
-                        <img src="https://picsum.photos/150/200?random=11" class="figure-img rounded img_opac mb-0 img_sombra" alt="Mas vendidos 5">
-                        <figcaption class="popp_13 text-center">Titulo 5</figcaption>
+                        <img src="https://picsum.photos/150/200?random=11" class="figure-img rounded img_opac mb-1 img_sombra" alt="Mas vendidos 5">
+                        <figcaption class="popp_s text-center">Titulo 5</figcaption>
                     </figure>
                     <figure class="figure me-3">
-                        <img src="https://picsum.photos/150/200?random=12" class="figure-img rounded img_opac mb-0 img_sombra" alt="Mas vendidos 6">
-                        <figcaption class="popp_13 text-center">Titulo 6</figcaption>
+                        <img src="https://picsum.photos/150/200?random=12" class="figure-img rounded img_opac mb-1 img_sombra" alt="Mas vendidos 6">
+                        <figcaption class="popp_s text-center">Titulo 6</figcaption>
                     </figure>
                     <figure class="figure me-3">
-                        <img src="https://picsum.photos/150/200?random=11" class="figure-img rounded img_opac mb-0 img_sombra" alt="Mas vendidos 7">
-                        <figcaption class="popp_13 text-center">Titulo 7</figcaption>
+                        <img src="https://picsum.photos/150/200?random=11" class="figure-img rounded img_opac mb-1 img_sombra" alt="Mas vendidos 7">
+                        <figcaption class="popp_s text-center">Titulo 7</figcaption>
                     </figure>
                 </div>
             </section>
             <!-- Sección para mostrar lanzamientos recientes -->
             <section class="section1 bkg_transp">
-                <p class="popp_15 mb-1">Destacados</p>
-                <!-- <div class="section_div100 section_div_adic"> -->
+                <p class="popp_m mb-1">Destacados</p>
                 <div class="flex_center gap-2">
-                    <div class="card mb-2 border-0">
-                        <div class="row m-0">
-                            <!-- <div class="col-5 col-md-5 pt-1 pb-1"> -->
-                            <div class="col-12 col-sm-5 pt-1 pb-1">
-                                <img src="https://picsum.photos/180?random=3" class="rounded d-block mx-auto" alt="Destacados 1">
+                    <div class="row justify-content-center">
+                        <div class="col-sm-11 col-lg-8">
+                            <div class="card mb-2 border-0">
+                                <div class="row m-0">
+                                    <!-- <div class="col-5 col-md-5 pt-1 pb-1"> -->
+                                    <div class="col-12 col-sm-5 pt-1 pb-1">
+                                        <img src="https://picsum.photos/180?random=3" class="rounded d-block mx-auto" alt="Destacados 1">
+                                    </div>
+                                    <!-- <div class="col-7 col-md-7 p-0"> -->
+                                    <div class="col-auto col-sm-7 p-0 mx-auto">
+                                        <div class="card-body p-1">
+                                            <p class="popp_s d-block text_al">AA Lorem ipsum dolor, sit amet consectet
+                                            adipisicing elit. Non ad quae consequatur
+                                            at provident impedit ut alias, quis ab
+                                            blanditiis fuga assumenda aliquid 
+                                            reprehenderit ipsum eveniet minus mollitia
+                                            Lorem ipsum dolor sit amet consectetur
+                                            adipisicing elit. Praesentium nulla
+                                            ullam aperiam, repellendus dicta, 
+                                            possimus quidem officia temporibus...</p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <!-- <div class="col-7 col-md-7 p-0"> -->
-                            <div class="col-auto col-sm-7 p-0 mx-auto">
-                                <div class="card-body p-1">
-                                    <p class="popp_13 mb-0 d-block text_al">AA Lorem ipsum dolor, sit amet consectet<br>
-                                    adipisicing elit. Non ad quae consequatur<br>
-                                    at provident impedit ut alias, quis ab<br>
-                                    blanditiis fuga assumenda aliquid <br>
-                                    reprehenderit ipsum eveniet minus mollitia<br>
-                                    Lorem ipsum dolor sit amet consectetur<br>
-                                    adipisicing elit. Praesentium nulla<br>
-                                    ullam aperiam, repellendus dicta, <br>
-                                    possimus quidem officia temporibus...</p>
+                        </div>
+                        <div class="col-sm-11 col-lg-8">
+                            <div class="card mb-2 border-0">
+                                <div class="row m-0">
+                                    <div class="col-12 col-sm-5 pt-1 pb-1">
+                                        <img src="https://picsum.photos/180?random=4" class="rounded d-block mx-auto" alt="Destacados 2">
+                                    </div>
+                                    <div class="col-12 col-sm-7 p-0">
+                                        <div class="card-body p-1">
+                                            <p class="popp_s d-block text_al">BB Lorem ipsum dolor, sit amet consectet
+                                            adipisicing elit. Non ad quae consequatur
+                                            at provident impedit ut alias, quis ab
+                                            blanditiis fuga assumenda aliquid
+                                            reprehenderit ipsum eveniet minus mollitia
+                                            Lorem ipsum dolor sit amet consectetur
+                                            adipisicing elit. Praesentium nulla
+                                            ullam aperiam, repellendus dicta,
+                                            possimus quidem officia temporibus...</p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="card mb-2 border-0">
-                        <div class="row m-0">
-                            <div class="col-12 col-sm-5 pt-1 pb-1">
-                                <img src="https://picsum.photos/180?random=4" class="rounded d-block mx-auto" alt="Destacados 2">
-                            </div>
-                            <div class="col-12 col-sm-7 p-0">
-                                <div class="card-body p-1">
-                                    <p class="popp_13 mb-0 d-block text_al">BB Lorem ipsum dolor, sit amet consectet<br>
-                                    adipisicing elit. Non ad quae consequatur<br>
-                                    at provident impedit ut alias, quis ab<br>
-                                    blanditiis fuga assumenda aliquid <br>
-                                    reprehenderit ipsum eveniet minus mollitia<br>
-                                    Lorem ipsum dolor sit amet consectetur<br>
-                                    adipisicing elit. Praesentium nulla<br>
-                                    ullam aperiam, repellendus dicta, <br>
-                                    possimus quidem officia temporibus...</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--<div class="section_div_img">
-                        <img src="https://picsum.photos/180?random=3" alt="Imagen #1" class="section_div_img img_sombra">
-                        <div class="section_div_img popp_13">
-                            AA Lorem ipsum dolor, sit amet consectet<br>
-                            adipisicing elit. Non ad quae consequatur<br>
-                            at provident impedit ut alias, quis ab<br>
-                            blanditiis fuga assumenda aliquid <br>
-                            reprehenderit ipsum eveniet minus mollitia<br>
-                            Lorem ipsum dolor sit amet consectetur<br>
-                            adipisicing elit. Praesentium nulla<br>
-                            ullam aperiam, repellendus dicta, <br>
-                            possimus quidem officia temporibus...
-                        </div>
-                    </div>
-                    
-                    <div class="section_div_img">
-                        <img src="https://picsum.photos/180?random=4" alt="Imagen #2" class="section_div_img img_sombra">
-                        <div class="section_div_img popp_13">
-                            BB Lorem ipsum dolor, sit amet consectet<br>
-                            adipisicing elit. Non ad quae consequatur<br>
-                            at provident impedit ut alias, quis ab<br>
-                            blanditiis fuga assumenda aliquid <br>
-                            reprehenderit ipsum eveniet minus mollitia<br>
-                            Lorem ipsum dolor sit amet consectetur<br>
-                            adipisicing elit. Praesentium nulla<br>
-                            ullam aperiam, repellendus dicta, <br>
-                            possimus quidem officia temporibus...
-                        </div>
-                    </div>-->
-                    
                 </div>
             </section>
         </main>
         <!-- Para distintos anuncios, por ejemplo nuevas promociones, publicidades -->
         <aside class="asideLatD_Index bkg_transp">
-            <p class="popp_15">Promociones</p>
-            <!--<div class="flex_col gap-2">-->
-            <!-- Funciona con fit-content 
-            <div class="carousel justify-content-center" id="Carous_promo" data-bs-ride="carousel">-->
-            <!-- No funciona con fit-content, solo con ancho fijo 
-            d-flex align-items-center
-            -->
+            <p class="popp_m">Promociones</p>
             <div class="carousel slide carousel-fade justify-content-center" id="Carous_promo" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
@@ -232,53 +280,20 @@
                     <span class="carousel-control-next-icon " aria-hidden="true"></span>
                     <span class="visually-hidden">Next</span>
                 </button>
-                <!--</div>-->
-                <!--<div class="card border-0">
-                    <img src="https://picsum.photos/200/100?random=1" class="card-img-top p-1" alt="Imagen #1">
-                    <div class="card-body p-0">
-                        <p class="popp_13 mb-1">Lorem ipsum dolor sit<br>
-                            amet consectetur adipisicing<br>
-                            elit. Est doloribus ipsa<br>
-                            hic exercit</p>
-                    </div>
-                 </div>
-                 <div class="card border-0">
-                    <img src="https://picsum.photos/200/100?random=2" class="card-img-top p-1" alt="Imagen #2">
-                    <div class="card-body p-0">
-                        <p class="popp_13 mb-1">Lorem ipsum dolor sit<br>
-                            amet consectetur adipisicing<br>
-                            elit. Est doloribus ipsa<br>
-                            hic exercit</p>
-                    </div>
-                </div>
-                <img src="https://picsum.photos/200/100?random=1" alt="Imagen #1" class="section_div_img img_sombra">
-                <p class="popp_13">
-                    Lorem ipsum dolor sit<br>
-                    amet consectetur adipisicing<br>
-                    elit. Est doloribus ipsa<br>
-                    hic exercit<br>
-                </p>
-                <img src="https://picsum.photos/200/100?random=2" alt="Imagen #2" class="section_div_img img_sombra">
-                <p class="popp_13">
-                    Lorem ipsum dolor sit<br>
-                    amet consectetur adipisicing<br>
-                    elit. Est doloribus ipsa<br>
-                    hic exercit<br>
-                </p>-->
             </div>
         </aside>
-        <!-- Pie de pagina con acceso a distintas redes 
-        <footer class="bg-primary">-->
+        <!-- Pie de pagina con acceso a distintas redes -->
         <footer class="bkg_transp">
             <div>
                 <img src="./images/whts.png" alt="Escribinos por Whatsapp" class="footer_img">
                 <img src="./images/instag.png" alt="Seguinos en Instagram" class="footer_img">
                 <img src="./images/faceb.png" alt="Seguinos en Facebook" class="footer_img">
             </div>
-            <p class="popp_13">®2022 - Todos los derechos reservados</p>
+            <p class="popp_s mb-1">®2022 - Todos los derechos reservados</p>
         </footer>
     </div>
     <script src="./js/bootstrap.bundle.min.js"></script>
-    <!-- <script src="./js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> -->
+    <script src="./js/jquery-3.6.0.slim.min.js"></script>
+	<script src="./js/multicarousel.js"></script>
 </body>
 </html>
