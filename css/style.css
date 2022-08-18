@@ -7,6 +7,50 @@
   padding: 0;
   box-sizing: border-box; }
 
+body {
+  background-image: url("../images/backg1.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.titulos {
+  grid-area: titulos;
+  text-align: center; }
+
+.bkg_transp {
+  background: rgba(0, 0, 0, 0.7); }
+
+.section1 {
+  padding: 5px 5px 0px 5px;
+  border-radius: 10px; }
+
+.img_opac:hover {
+  opacity: .8; }
+
+.img_sombra {
+  box-shadow: 0 13px 27px -5px rgba(0, 0, 0, 0.25), 0 8px 16px -8px black, 0 -6px 16px -6px rgba(0, 0, 0, 0.03); }
+
+h1, h2 {
+  display: inline-block; }
+
+/* Cambios bootstrap*/
+.card {
+  background-color: transparent !important; }
+
+a:hover {
+  color: #e1e1e1 !important; }
+
+header {
+  grid-area: encabezado; }
+  header .header_img {
+    width: 300px;
+    margin-left: 10px; }
+  header .header_img:hover {
+    animation: pulse;
+    animation-duration: 1s; }
+  header .nav-item:hover {
+    background-color: rgba(88, 88, 88, 0.3); }
+
 footer {
   grid-area: pie;
   text-align: center;
@@ -41,9 +85,11 @@ footer {
 
 .font_ital {
   font-style: italic;
-  color: #bebebe; }
+  color: #bebebe;
+  /*color: rgb(190, 190, 190);*/ }
 
 .font_precio {
+  /*color:rgb(249, 121, 121);*/
   color: #f97979;
   font-weight: 600; }
 
@@ -54,14 +100,9 @@ footer {
 .font_espac2 {
   line-height: 150%; }
 
-header {
-  grid-area: encabezado; }
-  header .header_img {
-    width: 300px;
-    margin-left: 10px; }
-  header .header_img:hover {
-    animation: pulse;
-    animation-duration: 1s; }
+.animacion, .gridIndex .mainLatI_Index, .gridIndex .asideLatD_Index, .gridProds .mainLatI_Prod, .gridProds .asideLatD_Prod, .contenido, .formulario, .mapa {
+  animation: fadeInLeft;
+  animation-duration: 1s !important; }
 
 #MultiC .carousel-inner .carousel-item.active,
 #MultiC .carousel-inner .carousel-item-next,
@@ -89,28 +130,18 @@ header {
 #MultiC .carousel-item {
   justify-content: space-between; }
 
-body {
-  background-image: url("../images/backg1.jpg");
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: cover; }
-
-/*Index */
+/* Index */
 .gridIndex {
   display: grid;
   grid-template-columns: 75% 25%;
   grid-template-rows: repeat(5, auto);
-  grid-template-areas: "encabezado encabezado" "titulos titulos" "mainLatI_Index asideLatD_Index" "mainLatI_Index ." "pie pie";
-  grid-row-gap: 5px; }
+  grid-row-gap: 5px;
+  grid-template-areas: "encabezado encabezado" "titulos titulos" "mainLatI_Index asideLatD_Index" "mainLatI_Index ." "pie pie"; }
   .gridIndex .mainLatI_Index {
-    grid-area: mainLatI_Index;
     display: flex;
     flex-direction: column;
     gap: 10px;
-    padding-right: 1%;
-    padding-left: 1%;
-    animation: fadeInLeft;
-    animation-duration: 1s; }
+    grid-area: mainLatI_Index; }
     .gridIndex .mainLatI_Index .flex_start {
       display: flex;
       justify-content: flex-start;
@@ -122,14 +153,13 @@ body {
       justify-content: center;
       flex-wrap: wrap; }
   .gridIndex .asideLatD_Index {
-    grid-area: asideLatD_Index;
     display: inline-block;
     padding: 5px 0 5px 0;
     margin-right: 1%;
     border-radius: 10px;
     text-align: center;
-    animation: fadeInDown;
-    animation-duration: 1s; }
+    animation: fadeInRight;
+    grid-area: asideLatD_Index; }
     .gridIndex .asideLatD_Index #Carous_promo {
       width: 230px !important;
       margin: auto; }
@@ -141,97 +171,66 @@ body {
         border-radius: 10px; }
 
 /* Fin Index */
-.titulos {
-  grid-area: titulos;
-  text-align: center; }
-
-.bkg_transp {
-  background: rgba(0, 0, 0, 0.7); }
-
-.section1 {
-  padding: 5px 5px 0px 5px;
-  border-radius: 10px; }
-
-.prod_card {
-  width: 130px;
-  border: 1px solid rgba(0, 0, 0, 0.125) !important;
-  border-radius: 2px; }
-
-.img_opac:hover {
-  opacity: .8; }
-
-.img_sombra {
-  box-shadow: 0 13px 27px -5px rgba(0, 0, 0, 0.25), 0 8px 16px -8px black, 0 -6px 16px -6px rgba(0, 0, 0, 0.03); }
-
 /* Productos */
 .gridProds {
   display: grid;
   grid-template-columns: 75% 25%;
   grid-template-rows: repeat(5, auto);
-  grid-template-areas: "encabezado encabezado" "titulos titulos" "mainLatI_Prod asideLatD_Prod" "mainLatI_Prod ." "pie pie";
-  grid-row-gap: 5px; }
+  grid-row-gap: 5px;
+  grid-template-areas: "encabezado encabezado" "titulos titulos" "mainLatI_Prod asideLatD_Prod" "mainLatI_Prod ." "pie pie"; }
+  .gridProds .mainLatI_Prod {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    grid-area: mainLatI_Prod; }
+    .gridProds .mainLatI_Prod .prod_card {
+      width: 130px;
+      border: 1px solid rgba(0, 0, 0, 0.125);
+      border-radius: 2px; }
+  .gridProds .asideLatD_Prod {
+    display: inline-block;
+    padding: 5px 0 5px 0;
+    margin-right: 1%;
+    border-radius: 10px;
+    text-align: center;
+    animation: fadeInRight;
+    grid-area: asideLatD_Prod; }
+    .gridProds .asideLatD_Prod .categorias {
+      display: grid;
+      grid-template-columns: 35px auto;
+      grid-template-rows: repeat(4, auto);
+      grid-template-areas: "cat_titulo cat_titulo" "masVIco masV" "libIco libros" "jueIco juegos";
+      align-items: center; }
+      .gridProds .asideLatD_Prod .categorias .cat_titulo {
+        grid-area: cat_titulo;
+        justify-content: center; }
+      .gridProds .asideLatD_Prod .categorias .masVIco {
+        grid-area: masVIco; }
+      .gridProds .asideLatD_Prod .categorias .masV {
+        grid-area: masV;
+        text-align: start;
+        justify-items: center; }
+      .gridProds .asideLatD_Prod .categorias .libIco {
+        grid-area: libIco;
+        align-self: start; }
+      .gridProds .asideLatD_Prod .categorias .libros {
+        grid-area: libros;
+        display: inline;
+        text-align: left;
+        padding-top: 8px; }
+      .gridProds .asideLatD_Prod .categorias .jueIco {
+        grid-area: jueIco; }
+      .gridProds .asideLatD_Prod .categorias .juegos {
+        grid-area: juegos;
+        text-align: start;
+        justify-items: center; }
+      .gridProds .asideLatD_Prod .categorias .aside_subli {
+        list-style: none;
+        text-align: left; }
+    .gridProds .asideLatD_Prod .cat_resto {
+      display: none; }
 
-.mainLatI_Prod {
-  grid-area: mainLatI_Prod;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  padding-right: 1%;
-  padding-left: 1%;
-  animation: fadeInLeft;
-  animation-duration: 1s; }
-
-.asideLatD_Prod {
-  grid-area: asideLatD_Prod;
-  display: inline-block;
-  padding: 5px 0 5px 0;
-  margin-right: 1%;
-  border-radius: 10px;
-  text-align: center;
-  animation: fadeInDown;
-  animation-duration: 1s; }
-
-.categorias {
-  display: grid;
-  grid-template-columns: 35px auto;
-  grid-template-rows: repeat(4, auto);
-  grid-template-areas: "cat_titulo cat_titulo" "masVIco masV" "libIco libros" "jueIco juegos";
-  align-items: center; }
-
-.cat_titulo {
-  grid-area: cat_titulo;
-  justify-content: center; }
-
-.masVIco {
-  grid-area: masVIco; }
-
-.masV {
-  grid-area: masV;
-  text-align: start;
-  justify-items: center; }
-
-.libIco {
-  grid-area: libIco;
-  align-self: start; }
-
-.libros {
-  grid-area: libros;
-  display: inline;
-  text-align: left;
-  padding-top: 8px; }
-
-.jueIco {
-  grid-area: jueIco; }
-
-.juegos {
-  grid-area: juegos;
-  text-align: start;
-  justify-items: center; }
-
-.aside_subli {
-  list-style: none;
-  text-align: left; }
-
+/* Fin Productos */
 /* Novedades*/
 .gridNovs {
   display: grid;
@@ -239,8 +238,8 @@ body {
   grid-template-columns: 100%;
   grid-template-rows: repeat(4, auto);
   grid-template-rows: 1fr 1fr 100fr 1fr;
-  grid-template-areas: "encabezado" "titulos" "contenido" "pie";
-  grid-row-gap: 5px; }
+  grid-row-gap: 5px;
+  grid-template-areas: "encabezado" "titulos" "contenido" "pie"; }
 
 .contenido {
   grid-area: contenido; }
@@ -277,15 +276,12 @@ body {
 .formulario {
   display: flex;
   justify-content: space-evenly;
-  align-items: center;
-  animation: fadeInLeft;
-  animation-duration: 1s; }
+  align-items: center; }
 
 .mapa {
   grid-area: mapa;
   margin-right: 6%;
-  animation: fadeInDown;
-  animation-duration: 1s; }
+  animation: fadeInRight; }
 
 .cont_iframe {
   width: 98%;
@@ -302,16 +298,6 @@ body {
 
 .p_check {
   display: inline-block; }
-
-/* Cambios bootstrap*/
-.nav-item:hover {
-  background-color: rgba(88, 88, 88, 0.3) !important; }
-
-.card {
-  background-color: transparent !important; }
-
-a:hover {
-  color: #e1e1e1 !important; }
 
 /* Redimension publicidad */
 @media (min-width: 1440px) {
@@ -330,12 +316,8 @@ a:hover {
     grid-template-columns: 100%;
     grid-template-rows: repeat(5, auto);
     grid-template-areas: "encabezado" "titulos" "mainLatI_Index" "asideLatD_Index" "pie"; }
-    .gridIndex .mainLatI_Index {
-      animation: fadeInLeft;
-      animation-duration: 1s; }
     .gridIndex .asideLatD_Index {
-      animation: fadeInRight;
-      animation-duration: 1s;
+      animation: fadeInLeft;
       margin-left: 1%; }
       .gridIndex .asideLatD_Index #Carous_promo {
         width: 430px !important; }
@@ -344,45 +326,21 @@ a:hover {
         .gridIndex .asideLatD_Index #Carous_promo .img_car_promo2 {
           content: url("https://picsum.photos/430/200?random=2"); }
   /* Fin Index */
-  h1, h2 {
-    display: inline-block; }
   /* Productos */
   .gridProds {
     grid-template-columns: 100%;
     grid-template-rows: repeat(5, auto);
     grid-template-areas: "encabezado" "titulos" "asideLatD_Prod" "mainLatI_Prod" "pie"; }
-  .asideLatD_Prod {
-    margin-left: 1%;
-    animation: fadeInLeft;
-    animation-duration: 1s; }
-  .mainLatI_Prod {
-    animation: fadeInRight;
-    animation-duration: 1s; }
-  .categorias {
-    display: grid;
-    grid-template-columns: 35px auto 35px auto 35px auto;
-    grid-template-rows: repeat(2, auto);
-    grid-template-areas: "cat_titulo cat_titulo cat_titulo cat_titulo cat_titulo cat_titulo" "masVIco masV libIco libros jueIco juegos";
-    align-items: center; }
-  .cat_titulo {
-    display: none; }
-  .libros {
-    padding-top: 0;
-    display: inline-block; }
-  .ul_cats {
-    display: none;
-    position: absolute;
-    background: rgba(0, 0, 0, 0.7);
-    padding-left: 0;
-    margin-left: auto;
-    margin-right: auto;
-    left: 0;
-    right: 0;
-    width: fit-content; }
-  .ul_cats li {
-    display: inline-block; }
-  li:hover .ul_cats {
-    display: block; }
+    .gridProds .mainLatI_Prod {
+      animation: fadeInRight; }
+    .gridProds .asideLatD_Prod {
+      margin-left: 1%; }
+      .gridProds .asideLatD_Prod .categorias .cat_titulo {
+        display: none; }
+      .gridProds .asideLatD_Prod .cat_desk {
+        display: none; }
+      .gridProds .asideLatD_Prod .cat_resto {
+        display: inline-block; }
   /* Novedades */
   .novs_iframe {
     width: 461px;
@@ -395,16 +353,12 @@ a:hover {
   .formu {
     margin-left: 5%;
     margin-right: 5%; }
-  .formulario {
-    animation: fadeInLeft;
-    animation-duration: 1s; }
   .img_formu {
     display: none; }
   .mapa {
     margin-left: 5%;
     margin-right: 5%;
-    animation: fadeInRight;
-    animation-duration: 1s; }
+    animation: fadeInRight; }
   /* Boostrap */
   .nav-item {
     padding-left: 5px !important; } }
@@ -419,13 +373,14 @@ a:hover {
 /* Tamaño XS */
 @media (max-width: 576px) {
   /* Index */
+  .gridIndex .mainLatI_Index .text_al {
+    text-align: center; }
   .gridIndex .asideLatD_Index #Carous_promo {
     width: 330px !important; }
+  /* Fin Index */
   .card-group {
     display: flex;
     flex-flow: row wrap; }
-  .text_al {
-    text-align: center; }
   .novs_iframe {
     float: unset;
     width: 333px;

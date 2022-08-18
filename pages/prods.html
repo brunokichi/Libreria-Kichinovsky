@@ -4,10 +4,12 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="../css/bootstrap.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="../css/style.css">
+        <meta name="description" content="The Online Bookstore, no somos una simple libreria. Conocé nuestros productos en venta. Libros de Ciencia Ficción, Historia, Infantiles, cómics y manga, juegos de mesa y mucho más.">
+        <meta name="keywords" content="libreria, libros, comics, juegos, juegos de mesa, manga, congresos de lectura, club de beneficios">
         <link rel="shortcut icon" href="../images/icono.png">
-        <title>The Online Bookstore</title>
+        <link rel="stylesheet" href="../css/bootstrap.min.css">
+        <link rel="stylesheet" href="../css/style.css">
+        <title>The Online Bookstore - Productos</title>
     </head>
 <body>
     <div class="gridProds">
@@ -26,7 +28,7 @@
                                 <a class="nav-link" aria-current="page" href="../index.html">Inicio</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active transp" href="#">Productos</a>
+                                <a class="nav-link active" href="#">Productos</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="novedades.html">Novedades</a>
@@ -43,13 +45,13 @@
             </div>
         </header>
         <div class="titulos">
-            <h1 class="popp_xl mb-0 lh-1">The Online Bookstore</h1>
-            <h2 class="popp_l mb-1">Productos</h2>
+            <h1 class="popp_xl mb-0 lh-1 ms-2 me-2">The Online Bookstore</h1>
+            <h2 class="popp_l mb-1 ms-2 me-2">Productos</h2>
         </div>
-        <main class="mainLatI_Prod">
+        <main class="mainLatI_Prod ps-1 pe-1">
             <!-- Primer linea de productos -->
             <section class="section1 bkg_transp" id="mas_vend">
-                <p class="popp_m mb-1">Más vendidos</p>
+                <h3 class="popp_m mb-1">Más vendidos<h3>
                     <div class="card-group row-cols-auto gap-2 justify-item-end">
                         <div class="col">
                             <div class="card prod_card p-1 mb-1 h-100">
@@ -138,7 +140,7 @@
                     </div>
             </section>
             <section class="section1 bkg_transp" id="libros_ficcion">
-                <p class="popp_m mb-1">Libros - Ciencia Ficción</p>
+                <h3 class="popp_m mb-1">Libros - Ciencia Ficción</h3>
                 <div class="card-group row-cols-auto gap-2 justify-item-end">
                     <div class="col">
                         <div class="card prod_card p-1 mb-1 h-100">
@@ -167,7 +169,7 @@
                 </div>
             </section>
             <section class="section1 bkg_transp" id="libros_comic">
-                <p class="popp_m mb-1">Libros - Cómic y manga</p>
+                <h3 class="popp_m mb-1">Libros - Cómic y manga</h3>
                 <div class="card-group row-cols-auto gap-2 justify-item-end">
                     <div class="col">
                         <div class="card prod_card p-1 mb-1 h-100">
@@ -196,7 +198,7 @@
                 </div>
             </section>
             <section class="section1 bkg_transp" id="libros_historia">
-                <p class="popp_m mb-1">Libros - Historia</p>
+                <h3 class="popp_m mb-1">Libros - Historia</h3>
                 <div class="card-group row-cols-auto gap-2 justify-item-end">
                     <div class="col">
                         <div class="card prod_card p-1 mb-1 h-100">
@@ -225,7 +227,7 @@
                 </div>
             </section>
             <section class="section1 bkg_transp" id="libros_infant">
-                <p class="popp_m mb-1">Libros - Infantiles</p>
+                <h3 class="popp_m mb-1">Libros - Infantiles</h3>
                 <div class="card-group row-cols-auto gap-2 justify-item-end">
                     <div class="col">
                         <div class="card prod_card p-1 mb-1 h-100">
@@ -254,7 +256,7 @@
                 </div>
             </section>
             <section class="section1 bkg_transp" id="juegos">
-                <p class="popp_m mb-1">Juegos de mesa</p>
+                <h3 class="popp_m mb-1">Juegos de mesa</h3>
                 <div class="card-group row-cols-auto gap-2 justify-item-end">
                     <div class="col">
                         <div class="card prod_card p-1 mb-1 h-100">
@@ -297,77 +299,137 @@
         </main>
         <aside class="asideLatD_Prod bkg_transp">
             <script src="https://cdn.lordicon.com/xdjxvujz.js"></script>
-            <div class="categorias">
-                <p class="cat_titulo popp_m mb-1">Categorías</p>
-                <lord-icon class="masVIco" src="https://cdn.lordicon.com/jeikhfcr.json"
-                    trigger="loop"
-                    scale="55">
-                </lord-icon>
-                <div class="masV">
-                    <a href="#mas_vend" class="text-decoration-none nav-item popp_s">Más vendidos</a>
-                </div>
-                <lord-icon class="libIco" src="https://cdn.lordicon.com/dxoycpzg.json"
-                    colors="primary:#f24c00,secondary:#646e78,tertiary:#4bb3fd,quaternary:#ebe6ef,quinary:#f9c9c0"
-                    trigger="morph"
-                    delay="1500"
-                    scale="55">
-                </lord-icon>
-                <div class="libros">
-                    <nav>
-                        <ul class="aside_subli popp_s mb-0 ps-0">
-                            <li>
-                                <p class="libros mb-0 pt-1 popp_s">Libros</p>
-                                <ul class="ul_cats aside_subli popp_s ps-0">
-                                    <li class="aside_subli">
-                                        <lord-icon src="https://cdn.lordicon.com/pvucrfqe.json"
-                                            trigger="morph"
-                                            scale="55">
-                                        </lord-icon>
-                                        <a href="#libros_ficcion" class="text-decoration-none nav-item popp_s">Ciencia Ficción</a>
-                                    </li>
-                                    <li class="aside_subli">
-                                        <lord-icon src="https://cdn.lordicon.com/jnlncdtk.json"
-                                            trigger="morph"
-                                            scale="55">
-                                        </lord-icon>
-                                        <a href="#libros_comic" class="text-decoration-none nav-item popp_s">Cómic y manga</a>
-                                    </li>
-                                    <li class="aside_subli">
-                                        <lord-icon src="https://cdn.lordicon.com/wrvyifno.json"
-                                            trigger="morph"
-                                            scale="55">
-                                        </lord-icon>
-                                        <a href="#libros_historia" class="text-decoration-none nav-item popp_s">Historia</a>
-                                    </li>
-                                    <li class="aside_subli">
-                                        <lord-icon src="https://cdn.lordicon.com/reybmpdc.json"
-                                            trigger="morph"
-                                            scale="55">
-                                        </lord-icon>
-                                        <a href="#libros_infant" class="text-decoration-none nav-item popp_s">Infantiles</a>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-                <lord-icon class="jueIco" src="https://cdn.lordicon.com/nrvilcob.json"
-                    trigger="morph"
-                    scale="55">
-                </lord-icon>
-                <div class="juegos">
-                    <a href="#juegos" class="text-decoration-none nav-item popp_s">Juegos de mesa</a>
+            <div class="categorias cat_desk">
+                   <h3 class="cat_titulo popp_m mb-1">Categorías</h3>
+                    <lord-icon class="masVIco" src="https://cdn.lordicon.com/jeikhfcr.json"
+                        trigger="loop"
+                        scale="55">
+                    </lord-icon>
+                    <div class="masV">
+                        <a href="#mas_vend" class="text-decoration-none nav-item popp_s">Más vendidos</a>
+                    </div>
+                    <lord-icon class="libIco" src="https://cdn.lordicon.com/dxoycpzg.json"
+                        colors="primary:#f24c00,secondary:#646e78,tertiary:#4bb3fd,quaternary:#ebe6ef,quinary:#f9c9c0"
+                        trigger="morph"
+                        delay="1500"
+                        scale="55">
+                    </lord-icon>
+                    <div class="libros">
+                        <nav>
+                            <ul class="aside_subli popp_s mb-0 ps-0">
+                                <li>
+                                    <p class="libros mb-0 pt-1 popp_s">Libros</p>
+                                    <ul class="ul_cats aside_subli popp_s ps-0">
+                                        <li class="aside_subli">
+                                            <lord-icon src="https://cdn.lordicon.com/pvucrfqe.json"
+                                                trigger="morph"
+                                                scale="55">
+                                            </lord-icon>
+                                            <a href="#libros_ficcion" class="text-decoration-none nav-item popp_s">Ciencia Ficción</a>
+                                        </li>
+                                        <li class="aside_subli">
+                                            <lord-icon src="https://cdn.lordicon.com/jnlncdtk.json"
+                                                trigger="morph"
+                                                scale="55">
+                                            </lord-icon>
+                                            <a href="#libros_comic" class="text-decoration-none nav-item popp_s">Cómic y manga</a>
+                                        </li>
+                                        <li class="aside_subli">
+                                            <lord-icon src="https://cdn.lordicon.com/wrvyifno.json"
+                                                trigger="morph"
+                                                scale="55">
+                                            </lord-icon>
+                                            <a href="#libros_historia" class="text-decoration-none nav-item popp_s">Historia</a>
+                                        </li>
+                                        <li class="aside_subli">
+                                            <lord-icon src="https://cdn.lordicon.com/reybmpdc.json"
+                                                trigger="morph"
+                                                scale="55">
+                                            </lord-icon>
+                                            <a href="#libros_infant" class="text-decoration-none nav-item popp_s">Infantiles</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <lord-icon class="jueIco" src="https://cdn.lordicon.com/nrvilcob.json"
+                        trigger="morph"
+                        scale="55">
+                    </lord-icon>
+                    <div class="juegos">
+                        <a href="#juegos" class="text-decoration-none nav-item popp_s">Juegos de mesa</a>
+                    </div>
+            </div>
+            <div class="categorias cat_resto w-100">
+                <nav>
+                    <div class="nav justify-content-evenly" id="nav-tab" role="tablist">
+                        <div class="masV d-inline-block" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-vacio" type="button" role="tab" aria-controls="nav-vacio" aria-selected="false">
+                            <a href="#mas_vend" class="text-decoration-none nav-item popp_s"><lord-icon class="masVIco" src="https://cdn.lordicon.com/jeikhfcr.json"
+                                trigger="loop"
+                                scale="55">
+                            </lord-icon>Más vendidos</a>
+                         </div>
+                        <div class="libros pt-0 d-inline-block" id="nav-libros-tab" data-bs-toggle="tab" data-bs-target="#nav-libros" type="button" role="tab" aria-controls="nav-libros" aria-selected="false">
+                            <a href="#" class="text-decoration-none nav-item popp_s"><lord-icon class="libIco " src="https://cdn.lordicon.com/dxoycpzg.json"
+                                colors="primary:#f24c00,secondary:#646e78,tertiary:#4bb3fd,quaternary:#ebe6ef,quinary:#f9c9c0"
+                                trigger="morph"
+                                delay="1500"
+                                scale="55">
+                            </lord-icon>Libros</a>
+                        </div>
+                        <div class="juegos d-inline-block" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-vacio" type="button" role="tab" aria-controls="nav-vacio" aria-selected="false">
+                            <a href="#juegos" class="text-decoration-none nav-item popp_s"><lord-icon class="jueIco" src="https://cdn.lordicon.com/nrvilcob.json"
+                                trigger="morph"
+                                scale="55">
+                            </lord-icon>Juegos de mesa</a>
+                        </div>
+                    </div>
+                </nav>
+                <div class="tab-content" id="nav-tabContent">
+                    <div class="tab-pane fade show active popp_m" id="nav-vacio" role="tabpanel" aria-labelledby="nav-vacio-tab"></div>
+                    <div class="tab-pane fade popp_m" id="nav-libros" role="tabpanel" aria-labelledby="nav-libros-tab">
+                        <div>
+                            <lord-icon src="https://cdn.lordicon.com/pvucrfqe.json"
+                                trigger="morph"
+                                scale="55">
+                            </lord-icon>
+                            <a href="#libros_ficcion" class="text-decoration-none nav-item popp_s">Ciencia Ficción</a>
+                        </div>
+                        <div>
+                            <lord-icon src="https://cdn.lordicon.com/jnlncdtk.json"
+                                trigger="morph"
+                                scale="55">
+                            </lord-icon>
+                            <a href="#libros_comic" class="text-decoration-none nav-item popp_s">Cómic y manga</a>
+                        </div>
+                        <div>
+                            <lord-icon src="https://cdn.lordicon.com/wrvyifno.json"
+                                trigger="morph"
+                                scale="55">
+                            </lord-icon>
+                            <a href="#libros_historia" class="text-decoration-none nav-item popp_s">Historia</a>
+                        </div>
+                        <div>
+                            <lord-icon src="https://cdn.lordicon.com/reybmpdc.json"
+                                trigger="morph"
+                                scale="55">
+                            </lord-icon>
+                            <a href="#libros_infant" class="text-decoration-none nav-item popp_s">Infantiles</a>
+                            
+                        </div>
+                    </div>
                 </div>
             </div>
         </aside>
         <!-- Pie de pagina con acceso a distintas redes -->
         <footer class="bkg_transp">
             <div>
-                <img src="../images/whts.png" alt="Escribinos por Whatsapp" class="footer_img">
-                <img src="../images/instag.png" alt="Seguinos en Instagram" class="footer_img">
+                <img src="../images/whts.png" alt="Escribinos por Whatsapp" class="footer_img mt-1 me-2">
+                <img src="../images/instag.png" alt="Seguinos en Instagram" class="footer_img mt-1 me-2">
                 <img src="../images/faceb.png" alt="Seguinos en Facebook" class="footer_img">
             </div>
-            <p class="popp_s mb-1">®2022 - Todos los derechos reservados</p>
+            <p class="popp_s mb-1 mt-1">®2022 - Todos los derechos reservados</p>
         </footer>
     </div>
     <script src="../js/bootstrap.bundle.min.js"></script>

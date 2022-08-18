@@ -4,9 +4,11 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="./css/bootstrap.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="./css/style.css">
+        <meta name="description" content="The Online Bookstore, no somos una simple libreria. Venta de libros, juegos de mesa, club de beneficios y mas...">
+        <meta name="keywords" content="libreria, libros, comics, juegos, juegos de mesa, manga, congresos de lectura, club de beneficios">
         <link rel="shortcut icon" href="./images/icono.png">
+        <link rel="stylesheet" href="./css/bootstrap.min.css">
+        <link rel="stylesheet" href="./css/style.css">
         <title>The Online Bookstore</title>
     </head>
 <body>
@@ -23,7 +25,7 @@
                     <div class="collapse navbar-collapse justify-content-end" id="navbarToggler">
                         <ul class="navbar-nav popp_m">
                             <li class="nav-item">
-                                <a class="nav-link active transp" aria-current="page" href="#">Inicio</a>
+                                <a class="nav-link active" aria-current="page" href="#">Inicio</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="./pages/prods.html">Productos</a>
@@ -45,10 +47,10 @@
         <div class="titulos">
             <h1 class="popp_xl mb-1 lh-1">The Online Bookstore</h1>
         </div>
-        <main class="mainLatI_Index">
+        <main class="mainLatI_Index ps-1 pe-1">
             <!-- Secciónes para destacar productos -->
             <section class="section1 bkg_transp">
-                <p class="popp_m mb-1">Recomendados</p>
+                <h3 class="popp_m mb-1">Recomendados</h3>
                 <div id="MultiC">
                     <div class="row mx-auto my-auto justify-content-center">
                         <div id="multicarous" class="carousel slide" data-bs-ride="carousel">
@@ -115,7 +117,7 @@
                 </div>
             </section>
             <section class="section1 bkg_transp">
-                <p class="mb-1"><a href="pages/prods.html#mas_vend" class="text-decoration-none popp_m">Más vendidos</a></p>
+                <h3 class="mb-1 popp_m"><a href="pages/prods.html#mas_vend" class="text-decoration-none popp_m">Más vendidos</a></h3>
                 <div class="flex_start">
                     <figure class="figure me-3">
                         <img src="https://picsum.photos/150/200?random=11" class="figure-img rounded img_opac mb-1 img_sombra" alt="Mas vendidos 1">
@@ -149,7 +151,7 @@
             </section>
             <!-- Sección para mostrar lanzamientos recientes -->
             <section class="section1 bkg_transp">
-                <p class="popp_m mb-1">Destacados</p>
+                <h3 class="popp_m mb-1">Destacados</h3>
                 <div class="flex_center gap-2">
                     <div class="row justify-content-center">
                         <div class="col-sm-11 col-lg-8">
@@ -204,8 +206,8 @@
         </main>
         <!-- Para distintos anuncios, por ejemplo nuevas promociones, publicidades -->
         <aside class="asideLatD_Index bkg_transp">
-            <p class="popp_m">Promociones</p>
-            <div class="carousel slide carousel-fade justify-content-center" id="Carous_promo" data-bs-ride="carousel">
+            <h3 class="popp_m">Promociones</h3>
+            <div class="carousel slide carousel-fade justify-content-center mb-2" id="Carous_promo" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <img class="d-block w-100 img_car_promo1" alt="...">
@@ -235,11 +237,11 @@
         <!-- Pie de pagina con acceso a distintas redes -->
         <footer class="bkg_transp">
             <div>
-                <img src="./images/whts.png" alt="Escribinos por Whatsapp" class="footer_img">
-                <img src="./images/instag.png" alt="Seguinos en Instagram" class="footer_img">
+                <img src="./images/whts.png" alt="Escribinos por Whatsapp" class="footer_img mt-1 me-2">
+                <img src="./images/instag.png" alt="Seguinos en Instagram" class="footer_img mt-1 me-2">
                 <img src="./images/faceb.png" alt="Seguinos en Facebook" class="footer_img">
             </div>
-            <p class="popp_s mb-1">®2022 - Todos los derechos reservados</p>
+            <p class="popp_s mb-1 mt-1">®2022 - Todos los derechos reservados</p>
         </footer>
     </div>
     <script src="./js/bootstrap.bundle.min.js"></script>

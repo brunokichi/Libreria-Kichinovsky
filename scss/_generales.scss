@@ -1,0 +1,27 @@
+.titulos{
+    grid-area: titulos;
+    text-align: center;
+}
+.bkg_transp{
+    background: map-get($colores, fondo_transp);
+}
+.section1{
+    padding: 5px 5px 0px 5px;
+    border-radius: $borde_redond;
+}
+.img_opac:hover {
+	opacity: .8;
+}
+.img_sombra{
+    box-shadow: 0 13px 27px -5px rgba(0, 0, 0, 0.25), 0 8px 16px -8px hsl(0deg, 0%, 0% / 30%), 0 -6px 16px -6px rgba(0, 0, 0, 0.03);
+}
+h1,h2{
+    display: inline-block;
+}
+/* Cambios bootstrap*/
+.card{
+    background-color: transparent !important;
+}
+a:hover{
+    color: map-get($colores, fuente_normal) !important;
+}

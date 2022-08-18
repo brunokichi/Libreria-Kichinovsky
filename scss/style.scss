@@ -2,60 +2,47 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css');
 @import "reset.scss";
 @import "variables.scss";
+@import "mapas.scss";
+@import "body.scss";
+@import "generales.scss";
+@import "header.scss";
 @import "footer.scss";
 @import "fuentes.scss";
-@import "header.scss";
+@import "mixins.scss";
+@import "extends.scss";
 @import "multicarousel.scss";
 
-body{
-    background-image: url("../images/backg1.jpg");
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-/*Index */
+/* Index */
 .gridIndex {
-    display: grid;
-    grid-template-columns: 75% 25%; 
-    grid-template-rows: repeat(5, auto); 
+    @include grid_2x5;
     grid-template-areas:
         "encabezado encabezado"
         "titulos titulos"
         "mainLatI_Index asideLatD_Index"
         "mainLatI_Index ."
         "pie pie";
-    grid-row-gap: 5px;
         .mainLatI_Index {
+            @include mainLatI;
+            @extend .animacion;
             grid-area: mainLatI_Index;
-                display: flex;     
-                flex-direction: column;
-                gap: 10px;
-                padding-right: 1%;
-                padding-left: 1%;
-                animation: fadeInLeft;
-                animation-duration: $anim_duracion;
-                    .flex_start{
-                        display: flex;
-                        justify-content: flex-start; 
-                        flex-wrap: nowrap;
-                        overflow-x: auto;
-                        align-items: flex-end;
-                    }
-                    .flex_center{
-                        display: flex;
-                        justify-content:center; 
-                        flex-wrap: wrap;
-                    }
+                .flex_start{
+                    display: flex;
+                    justify-content: flex-start; 
+                    flex-wrap: nowrap;
+                    overflow-x: auto;
+                    align-items: flex-end;
+                }
+                .flex_center{
+                    display: flex;
+                    justify-content:center; 
+                    flex-wrap: wrap;
+                }
         }
         .asideLatD_Index{
+            @include asideLatD;
+            @extend .animacion;
+            animation: fadeInRight;
             grid-area: asideLatD_Index;
-            display: inline-block; 
-            padding: 5px 0 5px 0;
-            margin-right: 1%;
-            border-radius: $borde_redond;
-            text-align: center;
-            animation: fadeInDown;
-            animation-duration: $anim_duracion;
                 #Carous_promo{
                     width: 230px !important;
                     margin: auto;
@@ -71,106 +58,81 @@ body{
         }
 }
 /* Fin Index */
-.titulos{
-    grid-area: titulos;
-    text-align: center;
-}
-.bkg_transp{
-    background: $fondo_transp;
-}
-.section1{
-    padding: 5px 5px 0px 5px;
-    border-radius: $borde_redond;
-}
-.prod_card {
-    width: 130px;
-    border: 1px solid rgba(0, 0, 0, 0.125) !important;
-    border-radius: 2px;
-}
-.img_opac:hover {
-	opacity: .8;
-}
-.img_sombra{
-    box-shadow: 0 13px 27px -5px rgba(0, 0, 0, 0.25), 0 8px 16px -8px hsl(0deg, 0%, 0% / 30%), 0 -6px 16px -6px rgba(0, 0, 0, 0.03);
-}
 /* Productos */
 .gridProds {
-    display: grid;
-    grid-template-columns: 75% 25%; 
-    grid-template-rows: repeat(5, auto); 
+    @include grid_2x5;
     grid-template-areas:
         "encabezado encabezado"
         "titulos titulos"
         "mainLatI_Prod asideLatD_Prod"
         "mainLatI_Prod ."
         "pie pie";
-    grid-row-gap: 5px;
+        .mainLatI_Prod{
+            @include mainLatI;
+            @extend .animacion;
+            grid-area: mainLatI_Prod;
+                .prod_card {
+                    width: 130px;
+                    border: 1px solid map-get($colores, borde_card);
+                    border-radius: 2px;
+                }
+        }
+        .asideLatD_Prod{
+            @include asideLatD;
+            @extend .animacion;
+            animation: fadeInRight;
+            grid-area: asideLatD_Prod;
+                .categorias{
+                    display: grid;
+                    grid-template-columns: 35px auto; 
+                    grid-template-rows: repeat(4, auto); 
+                    grid-template-areas:
+                        "cat_titulo cat_titulo"
+                        "masVIco masV"
+                        "libIco libros"
+                        "jueIco juegos";
+                    align-items: center;
+                        .cat_titulo{
+                            grid-area: cat_titulo;
+                            justify-content: center;
+                        }
+                        .masVIco{
+                            grid-area: masVIco;
+                        }
+                        .masV{
+                            grid-area: masV;
+                            text-align: start;
+                            justify-items: center;
+                        }
+                        .libIco{
+                            grid-area: libIco;
+                            align-self: start;
+                        }
+                        .libros{
+                            grid-area: libros;
+                            display: inline;
+                            text-align: left;
+                            padding-top: 8px;
+                        }
+                        .jueIco{
+                            grid-area: jueIco;
+                        }
+                        .juegos{
+                            grid-area: juegos;
+                            text-align: start;
+                            justify-items: center;
+                        }
+                        .aside_subli{
+                            list-style:none;
+                            text-align: left;
+                        }
+                }
+                .cat_resto{
+                    display: none;
+                }
+        }
 }
-.mainLatI_Prod{
-    grid-area: mainLatI_Prod;
-    display: flex;     
-    flex-direction: column;
-    gap: 10px;
-    padding-right: 1%;
-    padding-left: 1%;
-    animation: fadeInLeft;
-    animation-duration: $anim_duracion;
-}
-.asideLatD_Prod{
-    grid-area: asideLatD_Prod;
-    display: inline-block; 
-    padding: 5px 0 5px 0;
-    margin-right: 1%;
-    border-radius: $borde_redond;
-    text-align: center;
-    animation: fadeInDown;
-    animation-duration: $anim_duracion;
-}
-.categorias{
-    display: grid;
-    grid-template-columns: 35px auto; 
-    grid-template-rows: repeat(4, auto); 
-    grid-template-areas:
-        "cat_titulo cat_titulo"
-        "masVIco masV"
-        "libIco libros"
-        "jueIco juegos";
-    align-items: center;
-}
-.cat_titulo{
-    grid-area: cat_titulo;
-    justify-content: center;
-}
-.masVIco{
-    grid-area: masVIco;
-}
-.masV{
-    grid-area: masV;
-    text-align: start;
-    justify-items: center;
-}
-.libIco{
-    grid-area: libIco;
-    align-self: start;
-}
-.libros{
-    grid-area: libros;
-    display: inline;
-    text-align: left;
-    padding-top: 8px;
-}
-.jueIco{
-    grid-area: jueIco;
-}
-.juegos{
-    grid-area: juegos;
-    text-align: start;
-    justify-items: center;
-}
-.aside_subli{
-    list-style:none;
-    text-align: left;
-}
+/* Fin Productos */
 /* Novedades*/
 .gridNovs {
     display: grid;
@@ -178,15 +140,16 @@ body{
     grid-template-columns: 100%; 
     grid-template-rows: repeat(4, auto);
     grid-template-rows: 1fr 1fr 100fr 1fr;
+    grid-row-gap: 5px;
     grid-template-areas:
         "encabezado"
         "titulos"
         "contenido"
         "pie";
-    grid-row-gap: 5px;
 }
 .contenido{
     grid-area: contenido;
+    @extend .animacion;
 }
 .fila{
     display: flex;
@@ -225,14 +188,13 @@ body{
     display: flex;
     justify-content: space-evenly;
     align-items: center; 
-    animation: fadeInLeft;
-    animation-duration: $anim_duracion;
+    @extend .animacion;
 }
 .mapa{
     grid-area: mapa;
     margin-right: 6%;
-    animation: fadeInDown;
-    animation-duration: $anim_duracion;
+    @extend .animacion;
+    animation: fadeInRight;
 }
 .cont_iframe{
     width: 98%;
@@ -249,16 +211,6 @@ body{
 }
 .p_check{
     display: inline-block;
-}
-/* Cambios bootstrap*/
-.nav-item:hover{
-    background-color: rgba(88, 88, 88, 0.3) !important;
-}
-.card{
-    background-color: transparent !important;
-}
-a:hover{
-    color: $fuente_color !important;
 }
 /* Redimension publicidad */
 @media (min-width:1440px){
@@ -289,13 +241,8 @@ a:hover{
             "mainLatI_Index"
             "asideLatD_Index"
             "pie";
-            .mainLatI_Index{
-                animation: fadeInLeft;
-                animation-duration: $anim_duracion;
-            }
             .asideLatD_Index{
-                animation: fadeInRight;
-                animation-duration: $anim_duracion;
+                animation: fadeInLeft;
                 margin-left: 1%;
                     #Carous_promo{
                         width: 430px !important;
@@ -309,9 +256,6 @@ a:hover{
             }
     }
     /* Fin Index */
-    h1,h2{
-        display: inline-block;
-    }
     /* Productos */
     .gridProds {
         grid-template-columns: 100%; 
@@ -322,49 +266,25 @@ a:hover{
             "asideLatD_Prod"
             "mainLatI_Prod"
             "pie";
+            .mainLatI_Prod{
+                animation: fadeInRight;
+            }
+            .asideLatD_Prod{
+                margin-left: 1%;
+                .categorias{
+                    .cat_titulo{
+                        display: none;
+                    }
+                }
+                .cat_desk{
+                    display: none;
+                }
+                .cat_resto{
+                    display: inline-block;
+                }
+            }
     }
-    .asideLatD_Prod{
-        margin-left: 1%;
-        animation: fadeInLeft;
-        animation-duration: $anim_duracion;
-    }
-    .mainLatI_Prod{
-        animation: fadeInRight;
-        animation-duration: $anim_duracion;
-    }
-    .categorias{
-        display: grid;
-        grid-template-columns: 35px auto 35px auto 35px auto;
-        grid-template-rows: repeat(2, auto);
-        grid-template-areas:
-            "cat_titulo cat_titulo cat_titulo cat_titulo cat_titulo cat_titulo"
-            "masVIco masV libIco libros jueIco juegos";
-        align-items: center;
-    }
-    .cat_titulo{
-        display: none;
-    }
-    .libros{
-        padding-top: 0;
-        display: inline-block;
-    }
-    .ul_cats {
-        display: none;
-        position: absolute;
-        background: $fondo_transp;
-        padding-left: 0;
-        margin-left: auto;
-        margin-right: auto;
-        left: 0;
-        right: 0;
-        width: fit-content;
-     }
-    .ul_cats li {
-        display: inline-block;
-    }
-    li:hover .ul_cats {
-        display: block;
-     }
+        
     /* Novedades */
     .novs_iframe{
         width: 461px;
@@ -385,10 +305,6 @@ a:hover{
         margin-left: 5%;
         margin-right: 5%;
     }
-    .formulario{
-        animation: fadeInLeft;
-        animation-duration: $anim_duracion;
-    }
     .img_formu{
         display: none;
     }
@@ -396,7 +312,6 @@ a:hover{
         margin-left: 5%;
         margin-right: 5%;
         animation: fadeInRight;
-        animation-duration: $anim_duracion;
     }
     /* Boostrap */
     .nav-item{
@@ -415,19 +330,23 @@ a:hover{
 @media (max-width:576px){
     /* Index */
     .gridIndex {
+        .mainLatI_Index{
+            .text_al{
+                text-align: center;
+            }
+        }
         .asideLatD_Index{
             #Carous_promo{
                 width: 330px !important;
             }
         }
     }
+    /* Fin Index */
     .card-group {
         display: flex;
         flex-flow: row wrap;
     }
-    .text_al{
-        text-align: center;
-    }
+    
     .novs_iframe{
         float:unset;
         width: 333px;
