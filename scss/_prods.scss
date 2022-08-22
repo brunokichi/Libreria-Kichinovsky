@@ -1,0 +1,116 @@
+/* Productos */
+.gridProds {
+    @include grid_2x5;
+    grid-template-areas:
+        "encabezado encabezado"
+        "titulos titulos"
+        "mainLatI_Prod asideLatD_Prod"
+        "mainLatI_Prod ."
+        "pie pie";
+        .mainLatI_Prod{
+            @include mainLatI;
+            @extend .animacion;
+            grid-area: mainLatI_Prod;
+                .prod_card {
+                    width: 130px;
+                    border: 1px solid map-get($colores, borde_card);
+                    border-radius: 2px;
+                }
+        }
+        .asideLatD_Prod{
+            @include asideLatD;
+            @extend .animacion;
+            animation: fadeInRight;
+            grid-area: asideLatD_Prod;
+                .categorias{
+                    display: grid;
+                    grid-template-columns: 35px auto; 
+                    grid-template-rows: repeat(4, auto); 
+                    grid-template-areas:
+                        "cat_titulo cat_titulo"
+                        "masVIco masV"
+                        "libIco libros"
+                        "jueIco juegos";
+                    align-items: center;
+                        .cat_titulo{
+                            grid-area: cat_titulo;
+                            justify-content: center;
+                        }
+                        .masVIco{
+                            grid-area: masVIco;
+                        }
+                        .masV{
+                            grid-area: masV;
+                            text-align: start;
+                            justify-items: center;
+                        }
+                        .libIco{
+                            grid-area: libIco;
+                            align-self: start;
+                        }
+                        .libros{
+                            grid-area: libros;
+                            display: inline;
+                            text-align: left;
+                            padding-top: 8px;
+                        }
+                        .jueIco{
+                            grid-area: jueIco;
+                        }
+                        .juegos{
+                            grid-area: juegos;
+                            text-align: start;
+                            justify-items: center;
+                        }
+                        .aside_subli{
+                            list-style:none;
+                            text-align: left;
+                        }
+                }
+                .cat_resto{
+                    display: none;
+                }
+        }
+}
+/* Tamaño tablet */
+@media (max-width:1024px){
+    /* Productos */
+    .gridProds {
+        grid-template-columns: 100%; 
+        grid-template-rows: repeat(5, auto); 
+        grid-template-areas:
+            "encabezado"
+            "titulos"
+            "asideLatD_Prod"
+            "mainLatI_Prod"
+            "pie";
+            .mainLatI_Prod{
+                animation: fadeInRight;
+            }
+            .asideLatD_Prod{
+                margin-left: 1%;
+                .categorias{
+                    .cat_titulo{
+                        display: none;
+                    }
+                }
+                .cat_desk{
+                    display: none;
+                }
+                .cat_resto{
+                    display: inline-block;
+                }
+            }
+    }
+}
+/* Tamaño XS */
+@media (max-width:576px){
+    .gridProds {
+        .mainLatI_Prod{
+            .card-group {
+                display: flex;
+                flex-flow: row wrap;
+            }
+        }
+    }
+}

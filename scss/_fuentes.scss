@@ -19,15 +19,22 @@
     color: map-get($colores, fuente_normal);
     font-weight: 500;
 }
-.font_ital{
+.font_formu{
     font-style:italic;
-    color: map-get($colores, fuente_ital);
-    /*color: rgb(190, 190, 190);*/
+    color: map-get($colores, fuente_formu);
+}
+.font_autor{
+    font-style:italic;
+    color: map-get($colores, fuente_autor);
 }
 .font_precio{
-    /*color:rgb(249, 121, 121);*/
     color: map-get($colores, fuente_precio);
     font-weight: 600;
+}
+.font_pub{
+    color: map-get($colores, fuente_pub);
+    text-shadow: 0 0 4px black;
+    font-weight: 700;
 }
 .font_espac1{
     line-height: 120%;

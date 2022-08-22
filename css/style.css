@@ -30,7 +30,7 @@ body {
   background: rgba(0, 0, 0, 0.7); }
 
 .section1 {
-  padding: 5px 5px 0px 5px;
+  padding: 7px 7px 0px 7px;
   border-radius: 10px; }
 
 .img_opac:hover {
@@ -42,12 +42,61 @@ body {
 h1, h2 {
   display: inline-block; }
 
+.gridBN {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 100%;
+  grid-template-rows: repeat(4, auto);
+  grid-template-rows: 1fr 1fr 100fr 1fr;
+  grid-row-gap: 5px;
+  grid-template-areas: "encabezado" "titulos" "contenido" "pie"; }
+  .gridBN .contenido {
+    grid-area: contenido; }
+    .gridBN .contenido .fila {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      grid-column-gap: 1%;
+      row-gap: 5px;
+      flex-wrap: wrap;
+      padding-bottom: 5px; }
+      .gridBN .contenido .fila .novs_iframe {
+        float: right;
+        margin-left: 5px;
+        width: 769px;
+        height: 432px; }
+
 /* Cambios bootstrap*/
 .card {
   background-color: transparent !important; }
 
 a:hover {
   color: #e1e1e1 !important; }
+
+/* Tamaño tablet */
+@media (max-width: 1024px) {
+  .gridBN .contenido .fila .novs_iframe {
+    width: 461px;
+    height: 259px; }
+  /* Boostrap */
+  .nav-item {
+    padding-left: 5px !important; } }
+
+/* Tamaño celular */
+@media (max-width: 768px) {
+  .gridBN .contenido .fila .novs_iframe {
+    width: 370px;
+    height: 208px; } }
+
+/* Tamaño XS */
+@media (max-width: 576px) {
+  .gridBN .contenido .fila .novs_iframe {
+    float: unset;
+    width: 333px;
+    height: 187px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto; } }
 
 header {
   grid-area: encabezado; }
@@ -92,15 +141,22 @@ footer {
   color: #e1e1e1;
   font-weight: 500; }
 
-.font_ital {
+.font_formu {
   font-style: italic;
-  color: #bebebe;
-  /*color: rgb(190, 190, 190);*/ }
+  color: #212529; }
+
+.font_autor {
+  font-style: italic;
+  color: #bebebe; }
 
 .font_precio {
-  /*color:rgb(249, 121, 121);*/
   color: #f97979;
   font-weight: 600; }
+
+.font_pub {
+  color: white;
+  text-shadow: 0 0 4px black;
+  font-weight: 700; }
 
 .font_espac1 {
   line-height: 120%;
@@ -109,7 +165,7 @@ footer {
 .font_espac2 {
   line-height: 150%; }
 
-.animacion, .gridIndex .mainLatI_Index, .gridIndex .asideLatD_Index, .gridProds .mainLatI_Prod, .gridProds .asideLatD_Prod, .contenido, .formulario, .mapa {
+.animacion, .gridBN .contenido, .gridIndex .mainLatI_Index, .gridIndex .asideLatD_Index, .gridProds .mainLatI_Prod, .gridProds .asideLatD_Prod, .gridCont .formu .formulario, .gridCont .mapa {
   animation: fadeInLeft;
   animation-duration: 1s !important; }
 
@@ -139,7 +195,6 @@ footer {
 #MultiC .carousel-item {
   justify-content: space-between; }
 
-/* Index */
 .gridIndex {
   display: grid;
   grid-template-columns: 75% 25%;
@@ -173,13 +228,55 @@ footer {
       width: 230px !important;
       margin: auto; }
       .gridIndex .asideLatD_Index #Carous_promo .img_car_promo1 {
-        content: url("https://picsum.photos/230/400?random=1");
+        content: url("../images/pub_envios.jpg");
         border-radius: 10px; }
       .gridIndex .asideLatD_Index #Carous_promo .img_car_promo2 {
-        content: url("https://picsum.photos/230/400?random=2");
+        content: url("../images/pub_pagos.jpg");
         border-radius: 10px; }
+      .gridIndex .asideLatD_Index #Carous_promo .anim_promo {
+        animation-duration: 2s;
+        animation-name: cambio_opac;
+        animation-iteration-count: infinite; }
 
-/* Fin Index */
+@keyframes cambio_opac {
+  0% {
+    background-color: rgba(2, 88, 218, 0); }
+  50% {
+    background-color: #0258da; }
+  100% {
+    background-color: rgba(2, 88, 218, 0); } }
+
+/* Redimension publicidad */
+@media (min-width: 1440px) {
+  .gridIndex .asideLatD_Index #Carous_promo {
+    width: 300px !important; }
+    .gridIndex .asideLatD_Index #Carous_promo .img_car_promo1 {
+      content: url("../images/pub_envios_1440.jpg"); }
+    .gridIndex .asideLatD_Index #Carous_promo .img_car_promo2 {
+      content: url("../images/pub_pagos_1440.jpg"); } }
+
+@media (max-width: 1024px) {
+  .gridIndex {
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(5, auto);
+    grid-template-areas: "encabezado" "titulos" "mainLatI_Index" "asideLatD_Index" "pie"; }
+    .gridIndex .asideLatD_Index {
+      animation: fadeInLeft;
+      margin-left: 1%; }
+      .gridIndex .asideLatD_Index #Carous_promo {
+        width: 430px !important; }
+        .gridIndex .asideLatD_Index #Carous_promo .img_car_promo1 {
+          content: url("../images/pub_envios_1024.jpg"); }
+        .gridIndex .asideLatD_Index #Carous_promo .img_car_promo2 {
+          content: url("../images/pub_pagos_1024.jpg"); } }
+
+/* Tamaño XS */
+@media (max-width: 576px) {
+  .gridIndex .mainLatI_Index .text_al {
+    text-align: center; }
+  .gridIndex .asideLatD_Index #Carous_promo {
+    width: 330px !important; } }
+
 /* Productos */
 .gridProds {
   display: grid;
@@ -239,102 +336,8 @@ footer {
     .gridProds .asideLatD_Prod .cat_resto {
       display: none; }
 
-/* Fin Productos */
-/* Novedades*/
-.gridNovs {
-  display: grid;
-  height: 100vh;
-  grid-template-columns: 100%;
-  grid-template-rows: repeat(4, auto);
-  grid-template-rows: 1fr 1fr 100fr 1fr;
-  grid-row-gap: 5px;
-  grid-template-areas: "encabezado" "titulos" "contenido" "pie"; }
-
-.contenido {
-  grid-area: contenido; }
-
-.fila {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  grid-column-gap: 1%;
-  row-gap: 5px;
-  flex-wrap: wrap;
-  padding-bottom: 5px; }
-
-.novs_iframe {
-  float: right;
-  margin-left: 5px;
-  width: 769px;
-  height: 432px; }
-
-/* Contacto */
-.gridCont {
-  display: grid;
-  height: 100vh;
-  grid-template-columns: auto auto;
-  grid-template-rows: 1fr 1fr 100fr 1fr;
-  grid-template-areas: "encabezado encabezado" "titulos titulos" "formu mapa" "pie pie";
-  grid-column-gap: 3%;
-  grid-row-gap: 5px; }
-
-.formu {
-  grid-area: formu;
-  margin-left: 6%; }
-
-.formulario {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center; }
-
-.mapa {
-  grid-area: mapa;
-  margin-right: 6%;
-  animation: fadeInRight; }
-
-.cont_iframe {
-  width: 98%;
-  height: 442px;
-  border: 0;
-  margin: 1% 1% 0% 1%; }
-
-.cont_p {
-  padding: 0.1rem 0.3rem; }
-
-.cont_input {
-  width: 100%;
-  max-width: 400px; }
-
-.p_check {
-  display: inline-block; }
-
-/* Redimension publicidad */
-@media (min-width: 1440px) {
-  /* Index */
-  .gridIndex .asideLatD_Index #Carous_promo {
-    width: 330px !important; }
-    .gridIndex .asideLatD_Index #Carous_promo .img_car_promo1 {
-      content: url("https://picsum.photos/330/500?random=1"); }
-    .gridIndex .asideLatD_Index #Carous_promo .img_car_promo2 {
-      content: url("https://picsum.photos/330/500?random=2"); } }
-
 /* Tamaño tablet */
 @media (max-width: 1024px) {
-  /* Index */
-  .gridIndex {
-    grid-template-columns: 100%;
-    grid-template-rows: repeat(5, auto);
-    grid-template-areas: "encabezado" "titulos" "mainLatI_Index" "asideLatD_Index" "pie"; }
-    .gridIndex .asideLatD_Index {
-      animation: fadeInLeft;
-      margin-left: 1%; }
-      .gridIndex .asideLatD_Index #Carous_promo {
-        width: 430px !important; }
-        .gridIndex .asideLatD_Index #Carous_promo .img_car_promo1 {
-          content: url("https://picsum.photos/430/200?random=1"); }
-        .gridIndex .asideLatD_Index #Carous_promo .img_car_promo2 {
-          content: url("https://picsum.photos/430/200?random=2"); }
-  /* Fin Index */
   /* Productos */
   .gridProds {
     grid-template-columns: 100%;
@@ -349,51 +352,57 @@ footer {
       .gridProds .asideLatD_Prod .cat_desk {
         display: none; }
       .gridProds .asideLatD_Prod .cat_resto {
+        display: inline-block; } }
+
+/* Tamaño XS */
+@media (max-width: 576px) {
+  .gridProds .mainLatI_Prod .card-group {
+    display: flex;
+    flex-flow: row wrap; } }
+
+.gridCont {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: auto auto;
+  grid-template-rows: 1fr 1fr 100fr 1fr;
+  grid-template-areas: "encabezado encabezado" "titulos titulos" "formu mapa" "pie pie";
+  grid-column-gap: 3%;
+  grid-row-gap: 5px; }
+  .gridCont .formu {
+    grid-area: formu;
+    margin-left: 6%; }
+    .gridCont .formu .formulario {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center; }
+      .gridCont .formu .formulario .cont_p {
+        padding: 0.1rem 0.3rem; }
+      .gridCont .formu .formulario .cont_input {
+        width: 100%;
+        max-width: 400px; }
+      .gridCont .formu .formulario .p_check {
         display: inline-block; }
-  /* Novedades */
-  .novs_iframe {
-    width: 461px;
-    height: 259px; }
-  /* Contacto */
+  .gridCont .mapa {
+    grid-area: mapa;
+    margin-right: 6%;
+    animation: fadeInRight; }
+    .gridCont .mapa .cont_iframe {
+      width: 98%;
+      height: 442px;
+      border: 0;
+      margin: 1% 1% 0% 1%; }
+
+@media (max-width: 1024px) {
   .gridCont {
     grid-template-columns: auto;
     grid-template-rows: repeat(5, auto);
     grid-template-areas: "encabezado" "titulos" "formu" "mapa" "pie"; }
-  .formu {
-    margin-left: 5%;
-    margin-right: 5%; }
-  .img_formu {
-    display: none; }
-  .mapa {
-    margin-left: 5%;
-    margin-right: 5%;
-    animation: fadeInRight; }
-  /* Boostrap */
-  .nav-item {
-    padding-left: 5px !important; } }
-
-/* Tamaño celular */
-@media (max-width: 768px) {
-  /* Novedades */
-  .novs_iframe {
-    width: 370px;
-    height: 208px; } }
-
-/* Tamaño XS */
-@media (max-width: 576px) {
-  /* Index */
-  .gridIndex .mainLatI_Index .text_al {
-    text-align: center; }
-  .gridIndex .asideLatD_Index #Carous_promo {
-    width: 330px !important; }
-  /* Fin Index */
-  .card-group {
-    display: flex;
-    flex-flow: row wrap; }
-  .novs_iframe {
-    float: unset;
-    width: 333px;
-    height: 187px;
-    display: block;
-    margin-right: auto;
-    margin-left: auto; } }
+    .gridCont .formu {
+      margin-left: 5%;
+      margin-right: 5%; }
+      .gridCont .formu .formulario .img_formu {
+        display: none; }
+    .gridCont .mapa {
+      margin-left: 5%;
+      margin-right: 5%;
+      animation: fadeInRight; } }

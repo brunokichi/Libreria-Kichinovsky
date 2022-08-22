@@ -1,0 +1,110 @@
+.gridIndex {
+    @include grid_2x5;
+    grid-template-areas:
+        "encabezado encabezado"
+        "titulos titulos"
+        "mainLatI_Index asideLatD_Index"
+        "mainLatI_Index ."
+        "pie pie";
+        .mainLatI_Index {
+            @include mainLatI;
+            @extend .animacion;
+            grid-area: mainLatI_Index;
+                .flex_start{
+                    display: flex;
+                    justify-content: flex-start; 
+                    flex-wrap: nowrap;
+                    overflow-x: auto;
+                    align-items: flex-end;
+                }
+                .flex_center{
+                    display: flex;
+                    justify-content:center; 
+                    flex-wrap: wrap;
+                }
+        }
+        .asideLatD_Index{
+            @include asideLatD;
+            @extend .animacion;
+            animation: fadeInRight;
+            grid-area: asideLatD_Index;
+                #Carous_promo{
+                    width: 230px !important;
+                    margin: auto;
+                        .img_car_promo1{
+                            content: url("../images/pub_envios.jpg");
+                            border-radius: $borde_redond;
+                        }
+                        .img_car_promo2{
+                            content: url("../images/pub_pagos.jpg");
+                            border-radius: $borde_redond;
+                        }
+                        .anim_promo{
+                            animation-duration: 2s;
+                            animation-name: cambio_opac;
+                            animation-iteration-count: infinite;
+                        }
+                        @keyframes cambio_opac {
+                            0% { background-color:rgba(2, 88, 218, 0);}
+                            50% { background-color:rgba(2, 88, 218, 1)}
+                            100% { background-color:rgba(2, 88, 218, 0)}
+                         }
+                }
+        }
+}
+/* Redimension publicidad */
+@media (min-width:1440px){
+    .gridIndex {
+        .asideLatD_Index{
+            #Carous_promo{
+                width: 300px !important;
+                    .img_car_promo1{
+                        content: url("../images/pub_envios_1440.jpg");
+                    }
+                    .img_car_promo2{
+                        content: url("../images/pub_pagos_1440.jpg");
+                    }
+            }
+        }
+    }
+}
+@media (max-width:1024px){
+    .gridIndex {
+        grid-template-columns: 100%; 
+        grid-template-rows: repeat(5, auto); 
+        grid-template-areas:
+            "encabezado"
+            "titulos"
+            "mainLatI_Index"
+            "asideLatD_Index"
+            "pie";
+            .asideLatD_Index{
+                animation: fadeInLeft;
+                margin-left: 1%;
+                    #Carous_promo{
+                        width: 430px !important;
+                        .img_car_promo1{
+                            content: url("../images/pub_envios_1024.jpg");
+                        }
+                        .img_car_promo2{
+                            content: url("../images/pub_pagos_1024.jpg");
+                        }
+                    }
+            }
+    }
+}
+/* Tamaño XS */
+@media (max-width:576px){
+    .gridIndex {
+        .mainLatI_Index{
+            .text_al{
+                text-align: center;
+            }
+        }
+        .asideLatD_Index{
+            #Carous_promo{
+                width: 330px !important;
+            }
+        }
+    }
+}
