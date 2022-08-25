@@ -48,6 +48,10 @@ h1,h2{
                             height: 432px;
                         }
                 }
+                .img_club{
+                    float: right;
+                    margin-left: 5px;
+                }
         }
 }
 /* Cambios bootstrap*/
@@ -83,6 +87,12 @@ a:hover{
                     width: 370px;
                     height: 208px;
                 }
+            }
+            .img_club{
+                float: unset;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
             }
         }
     }

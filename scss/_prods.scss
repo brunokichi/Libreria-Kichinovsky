@@ -8,19 +8,20 @@
         "mainLatI_Prod ."
         "pie pie";
         .mainLatI_Prod{
-            @include mainLatI;
-            @extend .animacion;
+            @include mainLatI(column); 
             grid-area: mainLatI_Prod;
                 .prod_card {
                     width: 130px;
                     border: 1px solid map-get($colores, borde_card);
                     border-radius: 2px;
                 }
+                .prod_card_jdm {
+                    @extend .prod_card;
+                    width: 150px;
+                }
         }
         .asideLatD_Prod{
             @include asideLatD;
-            @extend .animacion;
-            animation: fadeInRight;
             grid-area: asideLatD_Prod;
                 .categorias{
                     display: grid;

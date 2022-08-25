@@ -7,20 +7,17 @@
         "mainLatI_Index ."
         "pie pie";
         .mainLatI_Index {
-            @include mainLatI;
+            @include mainLatI(column);
             @extend .animacion;
             grid-area: mainLatI_Index;
-                .flex_start{
-                    display: flex;
-                    justify-content: flex-start; 
-                    flex-wrap: nowrap;
-                    overflow-x: auto;
-                    align-items: flex-end;
+                .index_prods{
+                    width: 130px;
                 }
-                .flex_center{
-                    display: flex;
-                    justify-content:center; 
-                    flex-wrap: wrap;
+                .img-lanz-end{
+                    float: right;
+                }
+                .img-lanz-st{
+                    float: left;
                 }
         }
         .asideLatD_Index{
@@ -99,6 +96,18 @@
         .mainLatI_Index{
             .text_al{
                 text-align: center;
+            }
+            .img-lanz-end{
+                float:unset;
+                display: block;
+                margin-right: auto;
+                margin-left: auto;
+            }
+            .img-lanz-st{
+                float:unset;
+                display: block;
+                margin-right: auto;
+                margin-left: auto;
             }
         }
         .asideLatD_Index{

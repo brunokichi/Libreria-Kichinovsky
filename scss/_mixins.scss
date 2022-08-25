@@ -4,9 +4,9 @@
     grid-template-rows: repeat(5, auto); 
     grid-row-gap: 5px;
 }
-@mixin mainLatI{
+@mixin mainLatI($direction){
     display: flex;     
-    flex-direction: column;
+    flex-direction: $direction;
     gap: 10px;
 }
 @mixin asideLatD{
