@@ -35,7 +35,7 @@ body {
   border-radius: 10px; }
 
 .img_opac:hover {
-  opacity: .8; }
+  opacity: .7; }
 
 .img_sombra {
   box-shadow: 0 13px 27px -5px rgba(0, 0, 0, 0.25), 0 8px 16px -8px black, 0 -6px 16px -6px rgba(0, 0, 0, 0.03); }
@@ -255,18 +255,6 @@ footer {
       .gridIndex .asideLatD_Index #Carous_promo .img_car_promo2 {
         content: url("../images/pub_pagos.jpg");
         border-radius: 10px; }
-      .gridIndex .asideLatD_Index #Carous_promo .anim_promo {
-        animation-duration: 2s;
-        animation-name: cambio_opac;
-        animation-iteration-count: infinite; }
-
-@keyframes cambio_opac {
-  0% {
-    background-color: rgba(2, 88, 218, 0); }
-  50% {
-    background-color: #0258da; }
-  100% {
-    background-color: rgba(2, 88, 218, 0); } }
 
 /* Redimension publicidad */
 @media (min-width: 1440px) {
@@ -391,7 +379,8 @@ footer {
 @media (max-width: 576px) {
   .gridProds .mainLatI_Prod .card-group {
     display: flex;
-    flex-flow: row wrap; } }
+    flex-flow: row wrap;
+    justify-content: center; } }
 
 .gridCont {
   display: grid;
@@ -421,9 +410,9 @@ footer {
     animation: fadeInRight; }
     .gridCont .mapa .cont_iframe {
       width: 98%;
-      height: 442px;
+      height: 475px;
       border: 0;
-      margin: 1% 1% 0% 1%; }
+      margin: 1% 1% 1% 1%; }
 
 @media (max-width: 1024px) {
   .gridCont {

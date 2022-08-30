@@ -36,16 +36,6 @@
                             content: url("../images/pub_pagos.jpg");
                             border-radius: $borde_redond;
                         }
-                        .anim_promo{
-                            animation-duration: 2s;
-                            animation-name: cambio_opac;
-                            animation-iteration-count: infinite;
-                        }
-                        @keyframes cambio_opac {
-                            0% { background-color:rgba(2, 88, 218, 0);}
-                            50% { background-color:rgba(2, 88, 218, 1)}
-                            100% { background-color:rgba(2, 88, 218, 0)}
-                         }
                 }
         }
 }
