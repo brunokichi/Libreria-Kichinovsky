@@ -14,15 +14,7 @@ body {
   background-size: cover;
   color: #e1e1e1; }
 
-@media (max-width: 1024px) {
-  body {
-    background-image: url("../images/backg1_1024.jpg"); } }
-
-/* Tamaño celular */
-@media (max-width: 768px) {
-  body {
-    background-image: url("../images/backg1_768.jpg"); } }
-
+/* Estilos generales */
 .titulos {
   grid-area: titulos;
   text-align: center; }
@@ -50,6 +42,7 @@ body {
 h1, h2 {
   display: inline-block; }
 
+/* Grid beneficios y contacto */
 .gridBN {
   display: grid;
   height: 100vh;
@@ -84,36 +77,7 @@ h1, h2 {
 a:hover {
   color: #e1e1e1 !important; }
 
-/* Tamaño tablet */
-@media (max-width: 1024px) {
-  .gridBN .contenido .fila .novs_iframe {
-    width: 461px;
-    height: 259px; }
-  /* Boostrap */
-  .nav-item {
-    padding-left: 5px !important; } }
-
-/* Tamaño celular */
-@media (max-width: 768px) {
-  .gridBN .contenido .fila .novs_iframe {
-    width: 370px;
-    height: 208px; }
-  .gridBN .contenido .img_club {
-    float: unset;
-    display: block;
-    margin-left: auto;
-    margin-right: auto; } }
-
-/* Tamaño XS */
-@media (max-width: 576px) {
-  .gridBN .contenido .fila .novs_iframe {
-    float: unset;
-    width: 333px;
-    height: 187px;
-    display: block;
-    margin-right: auto;
-    margin-left: auto; } }
-
+/* Fin estilos generales */
 header {
   grid-area: encabezado; }
   header .header_img {
@@ -203,7 +167,7 @@ footer {
 
 #MultiC .carousel-inner .carousel-item-start.active,
 #MultiCb .carousel-inner .carousel-item-start.active {
-  opacity: .1; }
+  opacity: 0; }
 
 #MultiC .carousel-inner .carousel-item-prev,
 #MultiCb .carousel-inner .carousel-item-prev {
@@ -221,6 +185,7 @@ footer {
 #MultiCb .carousel-item {
   justify-content: space-between; }
 
+/* Inicio Header */
 .gridIndex {
   display: grid;
   grid-template-columns: 75% 25%;
@@ -256,47 +221,7 @@ footer {
         content: url("../images/pub_pagos.jpg");
         border-radius: 10px; }
 
-/* Redimension publicidad */
-@media (min-width: 1440px) {
-  .gridIndex .asideLatD_Index #Carous_promo {
-    width: 300px !important; }
-    .gridIndex .asideLatD_Index #Carous_promo .img_car_promo1 {
-      content: url("../images/pub_envios_1440.jpg"); }
-    .gridIndex .asideLatD_Index #Carous_promo .img_car_promo2 {
-      content: url("../images/pub_pagos_1440.jpg"); } }
-
-@media (max-width: 1024px) {
-  .gridIndex {
-    grid-template-columns: 100%;
-    grid-template-rows: repeat(5, auto);
-    grid-template-areas: "encabezado" "titulos" "mainLatI_Index" "asideLatD_Index" "pie"; }
-    .gridIndex .asideLatD_Index {
-      animation: fadeInLeft;
-      margin-left: 1%; }
-      .gridIndex .asideLatD_Index #Carous_promo {
-        width: 430px !important; }
-        .gridIndex .asideLatD_Index #Carous_promo .img_car_promo1 {
-          content: url("../images/pub_envios_1024.jpg"); }
-        .gridIndex .asideLatD_Index #Carous_promo .img_car_promo2 {
-          content: url("../images/pub_pagos_1024.jpg"); } }
-
-/* Tamaño XS */
-@media (max-width: 576px) {
-  .gridIndex .mainLatI_Index .text_al {
-    text-align: center; }
-  .gridIndex .mainLatI_Index .img-lanz-end {
-    float: unset;
-    display: block;
-    margin-right: auto;
-    margin-left: auto; }
-  .gridIndex .mainLatI_Index .img-lanz-st {
-    float: unset;
-    display: block;
-    margin-right: auto;
-    margin-left: auto; }
-  .gridIndex .asideLatD_Index #Carous_promo {
-    width: 330px !important; } }
-
+/* Fin header */
 /* Productos */
 .gridProds {
   display: grid;
@@ -357,31 +282,8 @@ footer {
     .gridProds .asideLatD_Prod .cat_resto {
       display: none; }
 
-/* Tamaño tablet */
-@media (max-width: 1024px) {
-  /* Productos */
-  .gridProds {
-    grid-template-columns: 100%;
-    grid-template-rows: repeat(5, auto);
-    grid-template-areas: "encabezado" "titulos" "asideLatD_Prod" "mainLatI_Prod" "pie"; }
-    .gridProds .mainLatI_Prod {
-      animation: fadeInRight; }
-    .gridProds .asideLatD_Prod {
-      margin-left: 1%; }
-      .gridProds .asideLatD_Prod .categorias .cat_titulo {
-        display: none; }
-      .gridProds .asideLatD_Prod .cat_desk {
-        display: none; }
-      .gridProds .asideLatD_Prod .cat_resto {
-        display: inline-block; } }
-
-/* Tamaño XS */
-@media (max-width: 576px) {
-  .gridProds .mainLatI_Prod .card-group {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center; } }
-
+/* Fin productos */
+/* Grid contacto principal */
 .gridCont {
   display: grid;
   height: 100vh;
@@ -414,7 +316,36 @@ footer {
       border: 0;
       margin: 1% 1% 1% 1%; }
 
+/* Fin Grid contacto principal */
+/* Redimension publicidad Index */
+@media (min-width: 1440px) {
+  .gridIndex .asideLatD_Index #Carous_promo {
+    width: 300px !important; }
+    .gridIndex .asideLatD_Index #Carous_promo .img_car_promo1 {
+      content: url("../images/pub_envios_1440.jpg"); }
+    .gridIndex .asideLatD_Index #Carous_promo .img_car_promo2 {
+      content: url("../images/pub_pagos_1440.jpg"); } }
+
+/* Tamaño tablet */
 @media (max-width: 1024px) {
+  body {
+    background-image: url("../images/backg1_1024.jpg"); }
+  /* Inicio Index */
+  .gridIndex {
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(5, auto);
+    grid-template-areas: "encabezado" "titulos" "mainLatI_Index" "asideLatD_Index" "pie"; }
+    .gridIndex .asideLatD_Index {
+      animation: fadeInLeft;
+      margin-left: 1%; }
+      .gridIndex .asideLatD_Index #Carous_promo {
+        width: 430px !important; }
+        .gridIndex .asideLatD_Index #Carous_promo .img_car_promo1 {
+          content: url("../images/pub_envios_1024.jpg"); }
+        .gridIndex .asideLatD_Index #Carous_promo .img_car_promo2 {
+          content: url("../images/pub_pagos_1024.jpg"); }
+  /* Fin Index */
+  /* Inicio contacto*/
   .gridCont {
     grid-template-columns: auto;
     grid-template-rows: repeat(5, auto);
@@ -427,4 +358,77 @@ footer {
     .gridCont .mapa {
       margin-left: 5%;
       margin-right: 5%;
-      animation: fadeInRight; } }
+      animation: fadeInRight; }
+  /* Fin contacto*/
+  /* Inicio Productos */
+  .gridProds {
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(5, auto);
+    grid-template-areas: "encabezado" "titulos" "asideLatD_Prod" "mainLatI_Prod" "pie"; }
+    .gridProds .mainLatI_Prod {
+      animation: fadeInRight; }
+    .gridProds .asideLatD_Prod {
+      margin-left: 1%; }
+      .gridProds .asideLatD_Prod .categorias .cat_titulo {
+        display: none; }
+      .gridProds .asideLatD_Prod .cat_desk {
+        display: none; }
+      .gridProds .asideLatD_Prod .cat_resto {
+        display: inline-block; }
+  /* Fin Productos */
+  /* Inicio Generales */
+  .gridBN .contenido .fila .novs_iframe {
+    width: 461px;
+    height: 259px; }
+  /* Boostrap */
+  header .navbar-collapse .navbar-nav .nav-item {
+    padding-left: 1rem !important; } }
+
+/* Tamaño celular */
+@media (max-width: 768px) {
+  body {
+    background-image: url("../images/backg1_768.jpg"); }
+  /* Inicio Generales */
+  .gridBN .contenido .fila .novs_iframe {
+    width: 370px;
+    height: 208px; }
+  .gridBN .contenido .img_club {
+    float: unset;
+    display: block;
+    margin-left: auto;
+    margin-right: auto; }
+  /* Fin Generales */ }
+
+/* Tamaño XS */
+@media (max-width: 576px) {
+  /* Inicio Index */
+  .gridIndex .mainLatI_Index .text_al {
+    text-align: center; }
+  .gridIndex .mainLatI_Index .img-lanz-end {
+    float: unset;
+    display: block;
+    margin-right: auto;
+    margin-left: auto; }
+  .gridIndex .mainLatI_Index .img-lanz-st {
+    float: unset;
+    display: block;
+    margin-right: auto;
+    margin-left: auto; }
+  .gridIndex .asideLatD_Index #Carous_promo {
+    width: 330px !important; }
+  /* Fin Index */
+  /* Inicio Productos */
+  .gridProds .mainLatI_Prod .card-group {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center; }
+  /* Fin Productos */
+  /* Inicio Generales */
+  .gridBN .contenido .fila .novs_iframe {
+    float: unset;
+    width: 333px;
+    height: 187px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto; }
+  /* Fin Generales */ }

@@ -73,46 +73,4 @@
                 }
         }
 }
-/* Tamaño tablet */
-@media (max-width:1024px){
-    /* Productos */
-    .gridProds {
-        grid-template-columns: 100%; 
-        grid-template-rows: repeat(5, auto); 
-        grid-template-areas:
-            "encabezado"
-            "titulos"
-            "asideLatD_Prod"
-            "mainLatI_Prod"
-            "pie";
-            .mainLatI_Prod{
-                animation: fadeInRight;
-            }
-            .asideLatD_Prod{
-                margin-left: 1%;
-                .categorias{
-                    .cat_titulo{
-                        display: none;
-                    }
-                }
-                .cat_desk{
-                    display: none;
-                }
-                .cat_resto{
-                    display: inline-block;
-                }
-            }
-    }
-}
-/* Tamaño XS */
-@media (max-width:576px){
-    .gridProds {
-        .mainLatI_Prod{
-            .card-group {
-                display: flex;
-                flex-flow: row wrap;
-                justify-content: center;
-            }
-        }
-    }
-}
+/* Fin productos */

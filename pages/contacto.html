@@ -13,15 +13,16 @@
     </head>
 <body>
     <div class="gridCont">
+        <!-- Inicio Header -->
         <header>
             <div class="container-fluid p-0">
                 <nav class="navbar navbar-expand-lg navbar-dark bkg_transp align-items-end p-0">
                     <!-- Logo -->
                     <a class="navbar-brand" href="../index.html"><img loading="lazy" src="../images/logo.png" alt="Imagen Logo" class="header_img"></a>
+                    <!-- Menú de navegación -->
                     <button class="navbar-toggler mb-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <!-- Menú de navegación -->
                     <div class="collapse navbar-collapse justify-content-end" id="navbarToggler">
                         <ul class="navbar-nav popp_m">
                             <li class="nav-item">
@@ -52,14 +53,12 @@
             <!-- Formulario de contacto -->
             <section class="section1 bkg_transp formulario">
                 <form action="#">
-                    <!-- Recuadro para datos personales -->
                     <p class="popp_l mb-1">Datos personales</p>
                     <div class="mb-3">
                         <input type="text" class="form-control form-control-sm cont_input popp_s font_formu mb-1" name="nombre_ape" placeholder="Escriba su nombre y apellido" required >
                         <input type="text" class="form-control form-control-sm cont_input popp_s font_formu mb-1" name="telefono" placeholder="Escriba su número de télefono" required>
                         <input type="email" class="form-control form-control-sm cont_input popp_s font_formu mb-1" name="email" placeholder="Ingrese su casilla de email" required>
                     </div>
-                    <!-- Recuadro para especificar motivo -->
                     <p class="popp_l mb-1">Motivo de contacto</p>
                     <select name="motivo" class="form-select form-select-sm cont_input popp_s font_formu">
                         <option value="Club">Club The Online Bookstore</option>
@@ -71,7 +70,6 @@
                     </select>
                     <p class="popp_l mt-3 mb-1">Escribanos un comentario</p>
                     <textarea name="comentario" id="comentario" class="form-control cont_input popp_s font_formu mb-3" rows="10" cols="50" placeholder="Describanos el motivo de su contacto"></textarea>
-                    <!-- Recuadro para encuesta -->
                     <p class="popp_l p_check mb-1">Nos recomendaria?</p>
                     <label for="recom_si" class="popp_s cont_p">Si
                         <input class="form-check-input" id="recom_si" name="recomend" type="radio" value="si" checked required>
@@ -79,7 +77,6 @@
                     <label for="recom_no" class="popp_s cont_p">No
                         <input class="form-check-input"" id="recom_no" name="recomend" type="radio" value="no"  required>
                     </label>
-                    <!-- Recuadro para control del formulario -->
                     <div class="mb-2 mt-2 d-flex justify-content-evenly">
                         <input class="btn btn-primary btn-sm popp_s" type="reset" value="Limpiar formulario">
                         <input class="btn btn-primary btn-sm popp_s" type="submit" value="Enviar formulario">
@@ -107,7 +104,7 @@
         <img loading="lazy" src="../images/top.png" alt="Ir al top" class="footer_img ir-arriba">
     </div>
     <script src="../js/bootstrap.bundle.min.js"></script>
-    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="../js/jquery-3.6.1.js"></script>
     <script src="../js/top.js"></script>
 </body>
 </html>

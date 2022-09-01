@@ -1,3 +1,4 @@
+/* Grid contacto principal */
 .gridCont {
     display: grid;
     height: 100vh;
@@ -43,29 +44,4 @@
                 }
         }
 }
-@media (max-width:1024px){
-    .gridCont {
-        grid-template-columns: auto; 
-        grid-template-rows: repeat(5, auto); 
-        grid-template-areas:
-            "encabezado"
-            "titulos"
-            "formu"
-            "mapa"
-            "pie";
-            .formu{
-                margin-left: 5%;
-                margin-right: 5%;
-                    .formulario{
-                        .img_formu{
-                            display: none;
-                        }
-                    }
-            }
-            .mapa{
-                margin-left: 5%;
-                margin-right: 5%;
-                animation: fadeInRight;
-            }
-    }
-}
+/* Fin Grid contacto principal */
