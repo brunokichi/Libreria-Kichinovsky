@@ -1,3 +1,4 @@
+/* Inicio Header */
 .gridIndex {
     @include grid_2x5;
     grid-template-areas:
@@ -36,84 +37,7 @@
                             content: url("../images/pub_pagos.jpg");
                             border-radius: $borde_redond;
                         }
-                        .anim_promo{
-                            animation-duration: 2s;
-                            animation-name: cambio_opac;
-                            animation-iteration-count: infinite;
-                        }
-                        @keyframes cambio_opac {
-                            0% { background-color:rgba(2, 88, 218, 0);}
-                            50% { background-color:rgba(2, 88, 218, 1)}
-                            100% { background-color:rgba(2, 88, 218, 0)}
-                         }
                 }
         }
 }
-/* Redimension publicidad */
-@media (min-width:1440px){
-    .gridIndex {
-        .asideLatD_Index{
-            #Carous_promo{
-                width: 300px !important;
-                    .img_car_promo1{
-                        content: url("../images/pub_envios_1440.jpg");
-                    }
-                    .img_car_promo2{
-                        content: url("../images/pub_pagos_1440.jpg");
-                    }
-            }
-        }
-    }
-}
-@media (max-width:1024px){
-    .gridIndex {
-        grid-template-columns: 100%; 
-        grid-template-rows: repeat(5, auto); 
-        grid-template-areas:
-            "encabezado"
-            "titulos"
-            "mainLatI_Index"
-            "asideLatD_Index"
-            "pie";
-            .asideLatD_Index{
-                animation: fadeInLeft;
-                margin-left: 1%;
-                    #Carous_promo{
-                        width: 430px !important;
-                        .img_car_promo1{
-                            content: url("../images/pub_envios_1024.jpg");
-                        }
-                        .img_car_promo2{
-                            content: url("../images/pub_pagos_1024.jpg");
-                        }
-                    }
-            }
-    }
-}
-/* Tamaño XS */
-@media (max-width:576px){
-    .gridIndex {
-        .mainLatI_Index{
-            .text_al{
-                text-align: center;
-            }
-            .img-lanz-end{
-                float:unset;
-                display: block;
-                margin-right: auto;
-                margin-left: auto;
-            }
-            .img-lanz-st{
-                float:unset;
-                display: block;
-                margin-right: auto;
-                margin-left: auto;
-            }
-        }
-        .asideLatD_Index{
-            #Carous_promo{
-                width: 330px !important;
-            }
-        }
-    }
-}
+/* Fin header */

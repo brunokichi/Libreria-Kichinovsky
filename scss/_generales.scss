@@ -1,3 +1,4 @@
+/* Estilos generales */
 .titulos{
     grid-area: titulos;
     text-align: center;
@@ -10,7 +11,7 @@
     border-radius: $borde_redond;
 }
 .img_opac:hover {
-	opacity: .8;
+	opacity: .7;
 }
 .img_sombra{
     box-shadow: 0 13px 27px -5px rgba(0, 0, 0, 0.25), 0 8px 16px -8px hsl(0deg, 0%, 0% / 30%), 0 -6px 16px -6px rgba(0, 0, 0, 0.03);
@@ -25,6 +26,7 @@
 h1,h2{
     display: inline-block;
 }
+/* Grid beneficios y contacto */
 .gridBN {
     display: grid;
     height: 100vh;
@@ -68,56 +70,4 @@ h1,h2{
 a:hover{
     color: map-get($colores, fuente_normal) !important;
 }
-/* Tamaño tablet */
-@media (max-width:1024px){
-    .gridBN {
-        .contenido{
-            .fila{
-                .novs_iframe{
-                    width: 461px;
-                    height: 259px;
-                }
-            }
-        }
-    }
-    /* Boostrap */
-    .nav-item{
-        padding-left: 5px !important;
-    }
-}
-/* Tamaño celular */
-@media (max-width:768px){
-    .gridBN {
-        .contenido{
-            .fila{
-                .novs_iframe{
-                    width: 370px;
-                    height: 208px;
-                }
-            }
-            .img_club{
-                float: unset;
-                display: block;
-                margin-left: auto;
-                margin-right: auto;
-            }
-        }
-    }
-}
-/* Tamaño XS */
-@media (max-width:576px){
-    .gridBN {
-        .contenido{
-            .fila{
-                .novs_iframe{
-                    float:unset;
-                    width: 333px;
-                    height: 187px;
-                    display: block;
-                    margin-right: auto;
-                    margin-left: auto;
-                }
-            }
-        }
-    }
-}
+/* Fin estilos generales */
